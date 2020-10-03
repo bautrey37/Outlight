@@ -1,0 +1,47 @@
+name: Actions 😎
+
+on:
+  pull_request: {}
+  push: { branches: [main] }
+
+env:
+  UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+
+jobs:
+  build:
+    name: Build my project ✨
+    runs-on: ubuntu-latest
+    steps:
+      # Checkout
+      - name: Checkout repository
+        uses: actions/checkout@v2.3.3
+        with:
+          lfs: true
+
+      # Cache
+      - uses: actions/cache@v2.1.1
+        with:
+          path: Library
+          key: Library
+
+      # Test
+      - name: Run tests
+        uses: webbertakken/unity-test-runner@v1.7
+        with:
+          unityVersion: 2020.1.3f1
+
+      # Build
+      - name: Build project
+        uses: webbertakken/unity-builder@v1.4
+        with:
+          unityVersion: 2020.1.3f1
+          targetPlatform:
+            - WebGL
+            - StandaloneOSX
+            - StandaloneWindows64
+
+      # Output
+      - uses: actions/upload-artifact@v2
+        with:
+          name: Build
+          path: build
