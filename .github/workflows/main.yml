@@ -14,8 +14,6 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        projectPath:
-          - test-project
         unityVersion:
           - 2020.1.3f1
         targetPlatform:
@@ -28,15 +26,11 @@ jobs:
           lfs: true
       - uses: actions/cache@v2.1.0
         with:
-          path: ${{ matrix.projectPath }}/Library
-          key: Library-${{ matrix.projectPath }}-${{ matrix.targetPlatform }}
-          restore-keys: |
-            Library-${{ matrix.projectPath }}-
-            Library-
+          path: Library
+          key: Library
       - uses: webbertakken/unity-test-runner@v1.7
         id: testRunner
         with:
-          projectPath: ${{ matrix.projectPath }}
           unityVersion: ${{ matrix.unityVersion }}
       - uses: actions/upload-artifact@v2
         with:
@@ -44,10 +38,9 @@ jobs:
           path: ${{ steps.testRunner.outputs.artifactsPath }}
       - uses: webbertakken/unity-builder@v1.4
         with:
-          projectPath: ${{ matrix.projectPath }}
           unityVersion: ${{ matrix.unityVersion }}
           targetPlatform: ${{ matrix.targetPlatform }}
-          customParameters: '-myParameter myValue -myBoolean -ThirdParameter andItsValue'
+          allowDirtyBuild: true
       - uses: actions/upload-artifact@v2
         with:
           name: Build
