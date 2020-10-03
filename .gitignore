@@ -13,6 +13,10 @@
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 !/[Aa]ssets/**/*.meta
 
+# Github Plugin in Unity generated files here
+/[Aa]ssets/[Pp]lugins/
+/[Aa]ssets/[Pp]lugins.meta
+
 # Uncomment this line if you wish to ignore the asset store tools plugin
 # /[Aa]ssets/AssetStoreTools*
 
