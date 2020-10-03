@@ -2,7 +2,7 @@
 
 Unity Game for UT
 
-![Unity CI 😎](https://github.com/bautrey37/Outlight/workflows/Actions%20%F0%9F%98%8E/badge.svg)
+![Unity CI](https://github.com/bautrey37/Outlight/workflows/Unity%20CI/badge.svg?branch=main)
 
 ## Authors
 - Brandon Autrey
