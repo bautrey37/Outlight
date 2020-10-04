@@ -28,14 +28,14 @@ jobs:
         with:
           path: Library
           key: Library
-      # - uses: webbertakken/unity-test-runner@v1.7
-      #   id: testRunner
-      #   with:
-      #     unityVersion: ${{ matrix.unityVersion }}
-      # - uses: actions/upload-artifact@v2
-      #   with:
-      #     name: Test results (all modes)
-      #     path: ${{ steps.testRunner.outputs.artifactsPath }}
+      - uses: webbertakken/unity-test-runner@v1.7
+        id: testRunner
+        with:
+          unityVersion: ${{ matrix.unityVersion }}
+      - uses: actions/upload-artifact@v2
+        with:
+          name: Test results (all modes)
+          path: ${{ steps.testRunner.outputs.artifactsPath }}
       - uses: webbertakken/unity-builder@v1.4
         with:
           unityVersion: ${{ matrix.unityVersion }}
