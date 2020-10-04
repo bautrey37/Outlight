@@ -32,6 +32,7 @@ jobs:
         id: testRunner
         with:
           unityVersion: ${{ matrix.unityVersion }}
+          customParameters: -nographics
       - uses: actions/upload-artifact@v2
         with:
           name: Test results (all modes)
@@ -41,6 +42,7 @@ jobs:
           unityVersion: ${{ matrix.unityVersion }}
           targetPlatform: ${{ matrix.targetPlatform }}
           allowDirtyBuild: true
+          customParameters: -nographics
       - uses: actions/upload-artifact@v2
         with:
           name: Build
