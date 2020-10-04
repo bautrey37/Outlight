@@ -6,5 +6,15 @@ Unity Game for UT
 
 ## Authors
 - Brandon Autrey
-- Miras Kenzhegaliyev 
+- Miras Kenzhegaliyev
 - Ruslan Parkhomenko
+
+## Unity CI
+
+https://unity-ci.com/docs/github/getting-started
+
+The `Acquire activation file` workflow is needed to be ran to get the license file.
+https://unity-ci.com/docs/github/activation
+
+The `Unity CI` workflow builds and tests the game on the specific Unity version, using the the code owner's Unity license, on specific platforms (Windows, OSX, WebGL).
+
