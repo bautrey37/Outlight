@@ -10,4 +10,10 @@ public static class Events
 
     public static event Func<int> OnRequestMoney;
     public static int RequestMoney() => OnRequestMoney?.Invoke() ?? 0;
+
+
+    public static event Action<StructureData> OnStructureSelected;
+    public static void SelectStructure(StructureData structure) => OnStructureSelected?.Invoke(structure);
+
+
 }
