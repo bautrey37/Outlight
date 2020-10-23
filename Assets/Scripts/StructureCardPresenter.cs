@@ -10,7 +10,7 @@ public class StructureCardPresenter : MonoBehaviour
     public StructureData StructureData;
 
     public TextMeshProUGUI CostText;
-    public TextMeshProUGUI ShortcutText;
+    // public TextMeshProUGUI ShortcutText;
     public Image IconImage;
 
     private Button button;
@@ -26,7 +26,7 @@ public class StructureCardPresenter : MonoBehaviour
         if (StructureData != null)
         {
             CostText.text = StructureData.Cost.ToString();
-            ShortcutText.text = StructureData.Shortcut;
+            // ShortcutText.text = StructureData.Shortcut;
             IconImage.sprite = StructureData.Icon;
         }
     }

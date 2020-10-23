@@ -26,6 +26,11 @@ public class StructureBuilder : MonoBehaviour
     private void OnStructureSelected(StructureData obj)
     {
         currentStructureData = obj;
+        for (int i = transform.childCount-1; i >= 0; i--)
+        {
+            Destroy(transform.GetChild(i).gameObject);
+        }
+        Instantiate(obj.StructurePrefab, transform.position, Quaternion.identity, transform);
         gameObject.SetActive(true);
     }
 
