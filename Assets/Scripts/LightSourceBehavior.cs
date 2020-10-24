@@ -4,12 +4,10 @@ using UnityEngine;
 
 public class LightSourceBehavior : MonoBehaviour
 {
-    private bool _On;
-    public bool On { get { return _On; } set { Toggle(value); _On = value; } }
+    public bool On = true;
 
-    private void Toggle(bool toVal)
+    public void Toggle()
     {
 
     }
-
 }
