@@ -30,7 +30,12 @@ public class StructureBuilder : MonoBehaviour
         {
             Destroy(transform.GetChild(i).gameObject);
         }
-        Instantiate(obj.StructurePrefab, transform.position, Quaternion.identity, transform);
+        Structure shadow = Instantiate(obj.StructurePrefab, transform.position, Quaternion.identity, transform);
+        LightSourceBehavior light = shadow.gameObject.GetComponent<LightSourceBehavior>();
+        if (light != null)
+        {
+            light.On = false;
+        }
         gameObject.SetActive(true);
     }
 
@@ -77,14 +82,24 @@ public class StructureBuilder : MonoBehaviour
     bool isFree(Vector3 pos)
     {
         Collider2D[] overlaps = Physics2D.OverlapCircleAll(pos, 0.45f);
+        Debug.Log(overlaps.Length);
+        bool IsLightNearby = false;
         foreach (Collider2D overlap in overlaps)
         {
             if (!overlap.isTrigger)
             {
+                Debug.Log(overlap.gameObject.name + " Collider is not a trigger");
+                
                 return false;
             }
+            if (overlap.gameObject.GetComponentInParent<LightSourceBehavior>() != null)
+            {
+                Debug.Log(overlap.gameObject.name + " is light source");
+                IsLightNearby = true;
+            }
         }
-        return true;
+        Debug.Log("Light Nearby: " + IsLightNearby);
+        return IsLightNearby;
     }
 
     void Build()
@@ -94,7 +109,8 @@ public class StructureBuilder : MonoBehaviour
 
         if (EventSystem.current.IsPointerOverGameObject()) return;
 
-        GameObject.Instantiate(currentStructureData.StructurePrefab, transform.position, Quaternion.identity, null);
+        Structure structure = Instantiate(currentStructureData.StructurePrefab, transform.position, Quaternion.identity, null);
+        LightSourceBehavior light = structure.gameObject.GetComponent<LightSourceBehavior>();
         gameObject.SetActive(false);
     }
 }
