@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    //private List<>
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,4 +17,21 @@ public class Enemy : MonoBehaviour
     {
         
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+
+    }
+
+
 }
