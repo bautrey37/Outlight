@@ -30,7 +30,12 @@ public class StructureBuilder : MonoBehaviour
         {
             Destroy(transform.GetChild(i).gameObject);
         }
-        Instantiate(obj.StructurePrefab, transform.position, Quaternion.identity, transform);
+        Structure shadow = Instantiate(obj.StructurePrefab, transform.position, Quaternion.identity, transform);
+        LightSourceBehavior light = shadow.gameObject.GetComponent<LightSourceBehavior>();
+        if (light != null)
+        {
+            light.On = false;
+        }
         gameObject.SetActive(true);
     }
 
@@ -94,7 +99,8 @@ public class StructureBuilder : MonoBehaviour
 
         if (EventSystem.current.IsPointerOverGameObject()) return;
 
-        GameObject.Instantiate(currentStructureData.StructurePrefab, transform.position, Quaternion.identity, null);
+        Structure structure = Instantiate(currentStructureData.StructurePrefab, transform.position, Quaternion.identity, null);
+        LightSourceBehavior light = structure.gameObject.GetComponent<LightSourceBehavior>();
         gameObject.SetActive(false);
     }
 }
