@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7958599936532629951}
   - component: {fileID: 6472407557076444909}
   - component: {fileID: 871217977973459553}
+  - component: {fileID: 178674433}
   m_Layer: 0
   m_Name: Fire
   m_TagString: Untagged
@@ -125,3 +126,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   On: 1
   LightMask: {fileID: 1769476660328713719, guid: ff1cbedc346f445428a838bba2b1b463, type: 3}
+--- !u!58 &178674433
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6509737512284085104}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.27

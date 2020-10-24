@@ -5,17 +5,16 @@ using UnityEngine;
 public class WaypointFollower : MonoBehaviour
 {
     public Waypoint Waypoint;
-    public float Speed = 2f;
-    public int Damage = 1;
+    public float Speed = 1f;
 
     void Start()
     {
-
     }
 
     void Update()
     {
         if (Waypoint == null) return;
+
         transform.position = Vector3.MoveTowards(transform.position, Waypoint.transform.position, Time.deltaTime * Speed);
 
         float distance = Vector3.SqrMagnitude(transform.position - Waypoint.transform.position);
@@ -32,6 +31,6 @@ public class WaypointFollower : MonoBehaviour
 
     void DestinationReached()
     {
-        GameObject.Destroy(this.gameObject);
+        //GameObject.Destroy(this.gameObject);
     }
 }
