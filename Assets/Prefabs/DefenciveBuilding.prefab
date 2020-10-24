@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2931258402302244382}
   - component: {fileID: 2931258402302244380}
   - component: {fileID: 865537652}
+  - component: {fileID: 865537653}
   m_Layer: 0
   m_Name: DefenciveBuilding
   m_TagString: Untagged
@@ -97,6 +98,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a487fb3b88905349b3310691e1f2ac5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ShootDelay: 0.4
+  BulletPrefab: {fileID: 6098228261532989901, guid: 9fc798c9e140adf48bcf5d5289d2637f, type: 3}
+  EnemiesInRange: []
 --- !u!114 &865537652
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -109,6 +113,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68e9bd86adcef4543a0d85513d127f66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!58 &865537653
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2931258402302244379}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 3
 --- !u!1 &2931258403398191939
 GameObject:
   m_ObjectHideFlags: 0
