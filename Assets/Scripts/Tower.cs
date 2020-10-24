@@ -1,6 +1,7 @@
 ﻿using System;
 using UnityEngine;
 using System.Linq;
+using UnityEngine.EventSystems;
 using System.Collections.Generic;
 
 public class Tower : MonoBehaviour
@@ -11,14 +12,27 @@ public class Tower : MonoBehaviour
 
     private List<Health> EnemiesInRange;
     private float NextBulletTime;
+    private StructureData currentStructureData;
 
     private void Awake()
     {
         EnemiesInRange = new List<Health>();
+        
+    }
+
+    private void OnDestroy()
+    {
+
     }
 
     private void Update()
     {
+
+        Vector3 mousepos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        mousepos = new Vector3(
+            Mathf.Round(mousepos.x - 0.5f) + 0.5f, Mathf.Round(mousepos.y - 0.5f) + 0.5f, 0);
+
+        transform.position = mousepos;
         if (Time.time > NextBulletTime && EnemiesInRange.Count > 0)
         {
             Fire();
