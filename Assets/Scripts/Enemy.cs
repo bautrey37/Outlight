@@ -8,9 +8,14 @@ public class Enemy : MonoBehaviour
     private float speed = 1f;
     private Transform target;
 
+    private void Awake()
+    {
+        TargetsInRange = new List<Health>();
+    }
+
     void Start()
     {
-        
+
     }
 
     void Update()
@@ -33,6 +38,7 @@ public class Enemy : MonoBehaviour
         if (TargetsInRange == null) return;
 
         Transform ClosestDistance = null;
+        //TargetsInRange = FindObjectOfTypeAll<Health>
         foreach (Health target in TargetsInRange)
         {
             if (ClosestDistance == null)
@@ -46,7 +52,7 @@ public class Enemy : MonoBehaviour
             }
             
         }
-
+        target = ClosestDistance;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
