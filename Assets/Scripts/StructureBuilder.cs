@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UIElements;
@@ -31,10 +32,12 @@ public class StructureBuilder : MonoBehaviour
             Destroy(transform.GetChild(i).gameObject);
         }
         Structure shadow = Instantiate(obj.StructurePrefab, transform.position, Quaternion.identity, transform);
-        LightSourceBehavior light = shadow.gameObject.GetComponent<LightSourceBehavior>();
-        if (light != null)
+        foreach (var comp in shadow.GetComponents<Component>())
         {
-            light.On = false;
+            if (!(comp is Transform) && !(comp is Renderer))
+            {
+                Destroy(comp);
+            }
         }
         gameObject.SetActive(true);
     }
@@ -85,15 +88,13 @@ public class StructureBuilder : MonoBehaviour
         bool IsLightNearby = false;
         foreach (Collider2D overlap in overlaps)
         {
-            if (!overlap.isTrigger)
-            {
-                return false;
-            }
+            Debug.Log(overlap.gameObject.name);
             if (overlap.gameObject.GetComponentInParent<LightSourceBehavior>() != null)
             {
                 IsLightNearby = true;
             }
         }
+        Debug.Log("Light: " + IsLightNearby);
         return IsLightNearby;
     }
 
