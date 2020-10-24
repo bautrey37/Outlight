@@ -52,7 +52,7 @@ public class Enemy : MonoBehaviour
             }   
         }
         // remove walking on waypoint to now follow target
-        GetComponent<WaypointFollower>().Waypoint = null;
+
 
         target = ClosestDistance;
     }

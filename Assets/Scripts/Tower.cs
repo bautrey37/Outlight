@@ -6,75 +6,63 @@ using System.Collections.Generic;
 
 public class Tower : MonoBehaviour
 {
-    //public Bullet BulletPrefab;
-    //public float TimeBetweenBullets = 0.1f;
-    //public int Damage = 1;
 
-    //private List<Health> EnemiesInRange;
-    //private float NextBulletTime;
-    //private StructureData currentStructureData;
+    public float ShootDelay = 1f;
+    public Bullet BulletPrefab;
+    private float NextShootTime;
+    public List<Health> EnemiesInRange;
 
-    //private void Awake()
-    //{
-    //    EnemiesInRange = new List<Health>();
-        
-    //}
+    private void Awake()
+    {
+        EnemiesInRange = new List<Health>();
+    }
 
-    //private void OnDestroy()
-    //{
+    private void Update()
+    {
+        if (NextShootTime <= Time.time)
+        {
+            Shoot();
+            NextShootTime += ShootDelay;
+        }
+    }
 
-    //}
+    private void Shoot()
+    {
+        Health enemy = null;
+        while (EnemiesInRange.Count > 0)
+        {
+            if (EnemiesInRange[0] == null)
+            {
+                EnemiesInRange.RemoveAt(0);
+            }
+            else
+            {
+                enemy = EnemiesInRange[0];
+                break;
+            }
+        }
+        if (enemy == null) return;
 
-    //private void Update()
-    //{
+        Bullet projectile = GameObject.Instantiate(
+        BulletPrefab, this.transform.position, Quaternion.identity, null);
+        projectile.Target = enemy;
+    }
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        Health enemy = collision.GetComponent<Health>();
+        if (enemy != null)
+        {
+            EnemiesInRange.Add(enemy);
+        }
+    }
 
-    //    Vector3 mousepos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-    //    mousepos = new Vector3(
-    //        Mathf.Round(mousepos.x - 0.5f) + 0.5f, Mathf.Round(mousepos.y - 0.5f) + 0.5f, 0);
-
-    //    transform.position = mousepos;
-    //    if (Time.time > NextBulletTime && EnemiesInRange.Count > 0)
-    //    {
-    //        Fire();
-    //    }
-    //}
-
-    //private void Fire()
-    //{
-    //    NextBulletTime = Time.time + TimeBetweenBullets;
-    //    Bullet b = Instantiate(BulletPrefab, transform.position, Quaternion.identity, null);
-    //    EnemiesInRange = EnemiesInRange.FindAll(e => e != null);
-    //    Health closest = EnemiesInRange[0];
-    //    //float minVal = float.MaxValue;
-    //    //
-    //    //EnemiesInRange.ForEach((enemy) =>
-    //    //{
-    //    //    float val = (basepoint.transform.position - enemy.transform.position).sqrMagnitude;
-    //    //    if (val < minVal)
-    //    //        {
-    //    //            closest = enemy;
-    //    //            minVal = val;
-    //    //        }
-    //    //});
-    //    b.Target = closest;
-    //    b.Damage = Damage;
-    //}
-
-    //private void OnTriggerEnter2D(Collider2D collision)
-    //{
-    //    Health enemy = collision.GetComponent<Health>();
-    //    if (enemy != null)
-    //    {
-    //        EnemiesInRange.Add(enemy);
-    //    }
-    //}
-
-    //private void OnTriggerExit2D(Collider2D collision)
-    //{
-    //    Health enemy = collision.GetComponent<Health>();
-    //    if (enemy != null)
-    //    {
-    //        EnemiesInRange.Remove(enemy);
-    //    }
-    //}
+    public void OnTriggerExit2D(Collider2D collision)
+    {
+        Health enemy = collision.GetComponent<Health>();
+        if (enemy != null)
+        {
+            EnemiesInRange.Remove(enemy);
+        }
+    }
 }
+
