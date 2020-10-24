@@ -81,24 +81,19 @@ public class StructureBuilder : MonoBehaviour
 
     bool isFree(Vector3 pos)
     {
-        Collider2D[] overlaps = Physics2D.OverlapCircleAll(pos, 0.45f);
-        Debug.Log(overlaps.Length);
+        Collider2D[] overlaps = Physics2D.OverlapCircleAll(pos, 0.2f);
         bool IsLightNearby = false;
         foreach (Collider2D overlap in overlaps)
         {
             if (!overlap.isTrigger)
             {
-                Debug.Log(overlap.gameObject.name + " Collider is not a trigger");
-                
                 return false;
             }
             if (overlap.gameObject.GetComponentInParent<LightSourceBehavior>() != null)
             {
-                Debug.Log(overlap.gameObject.name + " is light source");
                 IsLightNearby = true;
             }
         }
-        Debug.Log("Light Nearby: " + IsLightNearby);
         return IsLightNearby;
     }
 
