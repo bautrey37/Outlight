@@ -4,18 +4,18 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    private List<Health> TargetsInRange;
-    private float speed = 1f;
     private Transform target;
+    private List<Transform> TargetsInRange;
+    private float speed = 1f;
 
     private void Awake()
     {
-        TargetsInRange = new List<Health>();
+        TargetsInRange = new List<Transform>();
     }
 
     void Start()
     {
-
+        
     }
 
     void Update()
@@ -35,23 +35,25 @@ public class Enemy : MonoBehaviour
 
     void FindClosestTarget()
     {
-        if (TargetsInRange == null) return;
+        if (TargetsInRange.Count.Equals(0)) return;
 
         Transform ClosestDistance = null;
-        //TargetsInRange = FindObjectOfTypeAll<Health>
-        foreach (Health target in TargetsInRange)
+        foreach (Transform target in TargetsInRange)
         {
             if (ClosestDistance == null)
             {
-                ClosestDistance = target.transform;
+                ClosestDistance = target;
             }
-            if (Vector3.SqrMagnitude(transform.position - target.transform.position) < Vector3.SqrMagnitude(ClosestDistance.position))
+            if (Vector3.SqrMagnitude(transform.position - target.position)
+                < Vector3.SqrMagnitude(transform.position - ClosestDistance.position))
             {
-                ClosestDistance = target.transform;
+                ClosestDistance = target;
                 Debug.Log("Found new closest target");
-            }
-            
+            }   
         }
+        // remove walking on waypoint to now follow target
+        GetComponent<WaypointFollower>().Waypoint = null;
+
         target = ClosestDistance;
     }
 
@@ -60,7 +62,7 @@ public class Enemy : MonoBehaviour
         Health target = collision.GetComponent<Health>();
         if (target != null)
         {
-            TargetsInRange.Add(target);
+            TargetsInRange.Add(target.transform);
         }
     }
 
@@ -69,7 +71,7 @@ public class Enemy : MonoBehaviour
         Health target = collision.GetComponent<Health>();
         if (target != null)
         {
-            TargetsInRange.Remove(target);
+            TargetsInRange.Remove(target.transform);
         }
     }
 
@@ -78,9 +80,9 @@ public class Enemy : MonoBehaviour
         Health target = collision.GetComponent<Health>();
         if (target != null)
         {
-            if (TargetsInRange.Contains(target))
+            if (TargetsInRange.Contains(target.transform))
             {
-                TargetsInRange.Add(target);
+                TargetsInRange.Add(target.transform);
             }
         }
     }
