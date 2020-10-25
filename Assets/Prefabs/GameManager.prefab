@@ -59,4 +59,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3fee3b02ab0e46428f7f5ae267dc78e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EndGamePanel: {fileID: 0}
+  EndGameText: {fileID: 0}
+  EndGameButton: {fileID: 0}
   Money: 10
