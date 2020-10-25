@@ -9,6 +9,5 @@ public class EnemyData : ScriptableObject
     public int Health;
     public int AttackStrength;
     public float Speed;
-    public Sprite Icon;
     public Enemy EnemyPrefab;
 }
