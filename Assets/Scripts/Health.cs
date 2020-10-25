@@ -5,8 +5,7 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    public int MaxHealth = 5;
-    public int currentHealth;
+    internal int MaxHealth = 5;
     public int CurrentHealth
     {
         get => currentHealth;
@@ -22,6 +21,8 @@ public class Health : MonoBehaviour
             }
         }
     }
+
+    private int currentHealth;
 
     private void Start()
     {

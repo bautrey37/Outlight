@@ -15,6 +15,6 @@ MonoBehaviour:
   Name: Orc
   Health: 10
   AttackStrength: 1
+  AttackSpeed: 0.3
   Speed: 1
-  Icon: {fileID: 0}
   EnemyPrefab: {fileID: 8954180201819554369, guid: b06c629128907467885d753830d5ec83, type: 3}

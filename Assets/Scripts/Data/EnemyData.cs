@@ -8,6 +8,7 @@ public class EnemyData : ScriptableObject
     public string Name;
     public int Health;
     public int AttackStrength;
+    public float AttackSpeed;
     public float Speed;
     public Enemy EnemyPrefab;
 }
