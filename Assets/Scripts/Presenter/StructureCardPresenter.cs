@@ -15,6 +15,7 @@ public class StructureCardPresenter : MonoBehaviour
 
     private Button button;
 
+
     private void Awake()
     {
         button = GetComponent<Button>();
@@ -31,9 +32,19 @@ public class StructureCardPresenter : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        Events.OnSetMoney += OnSetMoney;
+    }
+
+    private void OnSetMoney(int value)
+    {
+        button.interactable = value > StructureData.Cost;
+    }
+
     private void Update()
     {
-        if (Input.GetKeyDown((KeyCode)Enum.Parse(typeof(KeyCode), StructureData.Shortcut)))
+        if (button.interactable && Input.GetKeyDown((KeyCode)Enum.Parse(typeof(KeyCode), StructureData.Shortcut)))
         {
             Pressed();
         }

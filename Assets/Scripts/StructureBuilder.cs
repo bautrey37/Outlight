@@ -74,6 +74,10 @@ public class StructureBuilder : MonoBehaviour
         {
             Build();
         }
+        if (Input.GetMouseButtonDown(2))
+        {
+            gameObject.SetActive(false);
+        }
     }
 
     void TintSprite (Color c)
@@ -104,12 +108,14 @@ public class StructureBuilder : MonoBehaviour
     void Build()
     {
         if (!isFree(transform.position)) return;
-        // remove gold
+
+        Events.RemoveMoney(currentStructureData.Cost);
 
         if (EventSystem.current.IsPointerOverGameObject()) return;
 
         Structure structure = Instantiate(currentStructureData.StructurePrefab, transform.position, Quaternion.identity, null);
         LightSourceBehavior light = structure.gameObject.GetComponent<LightSourceBehavior>();
+
         gameObject.SetActive(false);
     }
 }

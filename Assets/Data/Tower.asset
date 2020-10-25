@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Tower
   m_EditorClassIdentifier: 
   Name: Tower
-  Cost: 0
+  Cost: 6
   Health: 0
   Shortcut: Alpha2
   Icon: {fileID: -5893179646166548785, guid: 1aad5ca1aede74e9fba2eb8bff4215b1, type: 3}
