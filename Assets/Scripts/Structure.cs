@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Structure : MonoBehaviour
 {
-    StructureData structure;
+    public StructureData structure;
 
     Health HealthComponent;
 

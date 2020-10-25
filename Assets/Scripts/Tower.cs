@@ -22,8 +22,12 @@ public class Tower : MonoBehaviour
     {
         if (NextShootTime <= Time.time)
         {
-            Shoot();
-            NextShootTime += ShootDelay;
+            EnemiesInRange = EnemiesInRange.FindAll(e => e != null);
+            if (EnemiesInRange.Count > 0)
+            {
+                Shoot();
+                NextShootTime = Time.time + ShootDelay;
+            }
         }
     }
 
@@ -31,7 +35,6 @@ public class Tower : MonoBehaviour
     {
         Health closest = null;
         float minVal = float.MaxValue;
-        EnemiesInRange = EnemiesInRange.FindAll(e => e != null);
         EnemiesInRange.ForEach((enemy) =>
         {
             float val = (transform.position - enemy.transform.position).sqrMagnitude;
@@ -47,9 +50,11 @@ public class Tower : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log("Trigger1");
         Health enemy = collision.GetComponent<Health>();
         if (enemy != null)
         {
+            Debug.Log("Enemy!");
             EnemiesInRange.Add(enemy);
         }
     }

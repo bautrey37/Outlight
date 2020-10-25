@@ -74,7 +74,7 @@ public class StructureBuilder : MonoBehaviour
         {
             Build();
         }
-        if (Input.GetMouseButtonDown(2))
+        if (Input.GetMouseButtonDown(1))
         {
             gameObject.SetActive(false);
         }
@@ -96,7 +96,11 @@ public class StructureBuilder : MonoBehaviour
         foreach (Collider2D overlap in overlaps)
         {
             //Debug.Log(overlap.gameObject.name);
-            if (overlap.gameObject.GetComponentInParent<LightSourceBehavior>() != null || overlap.gameObject.GetComponent<LightSourceBehavior>() != null)
+            if (overlap.isTrigger)
+            {
+                return false;
+            }
+            if (overlap.gameObject.GetComponent<LightSourceBehavior>() != null)
             {
                 IsLightNearby = true;
             }
@@ -108,14 +112,11 @@ public class StructureBuilder : MonoBehaviour
     void Build()
     {
         if (!isFree(transform.position)) return;
+        if (EventSystem.current.IsPointerOverGameObject()) return;
 
         Events.RemoveMoney(currentStructureData.Cost);
 
-        if (EventSystem.current.IsPointerOverGameObject()) return;
-
-        Structure structure = Instantiate(currentStructureData.StructurePrefab, transform.position, Quaternion.identity, null);
-        LightSourceBehavior light = structure.gameObject.GetComponent<LightSourceBehavior>();
-
+        Instantiate(currentStructureData.StructurePrefab, transform.position, Quaternion.identity, null);
         gameObject.SetActive(false);
     }
 }

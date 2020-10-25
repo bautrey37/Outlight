@@ -39,7 +39,7 @@ public class StructureCardPresenter : MonoBehaviour
 
     private void OnSetMoney(int value)
     {
-        button.interactable = value > StructureData.Cost;
+        button.interactable = value >= StructureData.Cost;
     }
 
     private void Update()
