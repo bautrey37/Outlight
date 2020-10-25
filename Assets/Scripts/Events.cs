@@ -23,5 +23,8 @@ public static class Events
 
     public static void SelectSkill(SkillsData skill) => OnSkillSelected?.Invoke(skill);
 
+    public static event Action<GameObject> OnHealthDestroyed;
+    public static void HealthDestroyed(GameObject go) => OnHealthDestroyed?.Invoke(go);
+
 
 }

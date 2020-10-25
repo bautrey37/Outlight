@@ -2,6 +2,8 @@
 
 Unity Game for UT
 
+Page: https://courses.cs.ut.ee/2020/gamedev/fall/Outlight/Outlight
+
 ![Unity CI](https://github.com/bautrey37/Outlight/workflows/Unity%20CI/badge.svg?branch=main)
 
 ## Authors

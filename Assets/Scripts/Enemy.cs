@@ -12,8 +12,8 @@ public class Enemy : MonoBehaviour
     private int attackStrength;
     private float attackSpeed;
     private float attackDistance = 0.03f;
-
     private float nextAttack = 0f;
+    private SpriteRenderer spriteRenderer;
 
     private void Awake()
     {
@@ -22,6 +22,7 @@ public class Enemy : MonoBehaviour
         attackStrength = EnemyData.AttackStrength;
         attackSpeed = EnemyData.AttackSpeed;
         GetComponent<Health>().MaxHealth = EnemyData.Health;
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     void Start()
@@ -35,6 +36,8 @@ public class Enemy : MonoBehaviour
         {
             float step = movementSpeed * Time.deltaTime; // calculate distance to move
             transform.position = Vector2.MoveTowards(transform.position, target.position, step);
+
+            if (target.position.x < transform.position.x) spriteRenderer.flipX = true;
 
             if (Vector3.Distance(transform.position, target.position) < attackDistance)
             {
@@ -63,7 +66,7 @@ public class Enemy : MonoBehaviour
                 < Vector3.SqrMagnitude(transform.position - ClosestDistance.position))
             {
                 ClosestDistance = target;
-                Debug.Log("Found new closest target");
+                //Debug.Log("Found new closest target");
             }   
         }
 
@@ -76,7 +79,7 @@ public class Enemy : MonoBehaviour
 
     void Attack()
     {
-        Debug.Log("Attack Target");
+        //Debug.Log("Attack Target");
         Health targetHealth = target.GetComponent<Health>();
         if (targetHealth != null) targetHealth.Damage(attackStrength);
         nextAttack = Time.time + attackSpeed;
