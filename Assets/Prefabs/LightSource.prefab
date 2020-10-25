@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1769476660328713672}
   - component: {fileID: 1769476660328713719}
   - component: {fileID: 8838043099170068196}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: LightSource
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74,11 +74,11 @@ SpriteMask:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 9c88487b03a9ac5419e87bfbb972708a, type: 3}
   m_MaskAlphaCutoff: 0.2
-  m_FrontSortingLayerID: 0
+  m_FrontSortingLayerID: -971374051
   m_BackSortingLayerID: 0
-  m_FrontSortingLayer: 0
+  m_FrontSortingLayer: 1
   m_BackSortingLayer: 0
-  m_FrontSortingOrder: 5
+  m_FrontSortingOrder: 0
   m_BackSortingOrder: 0
   m_IsCustomRangeActive: 1
   m_SpriteSortPoint: 0
