@@ -13,7 +13,7 @@ public class IncreasingHealthScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Light[] light = GetComponents<Light>();
+        
       
         
     }
