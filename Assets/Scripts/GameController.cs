@@ -10,6 +10,7 @@ public class GameController : MonoBehaviour
     {
         Events.OnSetMoney += OnSetMoney;
         Events.OnRequestMoney += OnRequestMoney;
+        Events.OnHealthDestroyed += OnHealthDestroyed;
     }
 
     public void Start()
@@ -21,6 +22,7 @@ public class GameController : MonoBehaviour
     {
         Events.OnSetMoney -= OnSetMoney;
         Events.OnRequestMoney -= OnRequestMoney;
+        Events.OnHealthDestroyed -= OnHealthDestroyed;
     }
 
     private void OnSetMoney(int amount)
@@ -32,5 +34,33 @@ public class GameController : MonoBehaviour
     private int OnRequestMoney()
     {
         return Money;
+    }
+
+    void OnHealthDestroyed(GameObject go)
+    {
+        Structure[] structures = FindObjectsOfType<Structure>();
+        Camp[] camps = FindObjectsOfType<Camp>();
+
+        Camp camp = go.GetComponent<Camp>();
+        Structure structure = go.GetComponent<Structure>();
+
+        if (structures.Length == 1 && structure != null)
+        {
+            LoseLevel();
+        }
+        if (camps.Length == 1 && camp != null)
+        {
+            WinLevel();
+        }
+    }
+    
+    void WinLevel()
+    {
+        Debug.Log("Level Won");
+    }
+
+    void LoseLevel()
+    {
+        Debug.Log("Level Lost");
     }
 }

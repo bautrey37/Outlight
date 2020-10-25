@@ -63,7 +63,7 @@ public class Enemy : MonoBehaviour
                 < Vector3.SqrMagnitude(transform.position - ClosestDistance.position))
             {
                 ClosestDistance = target;
-                Debug.Log("Found new closest target");
+                //Debug.Log("Found new closest target");
             }   
         }
 
@@ -76,7 +76,7 @@ public class Enemy : MonoBehaviour
 
     void Attack()
     {
-        Debug.Log("Attack Target");
+        //Debug.Log("Attack Target");
         Health targetHealth = target.GetComponent<Health>();
         if (targetHealth != null) targetHealth.Damage(attackStrength);
         nextAttack = Time.time + attackSpeed;

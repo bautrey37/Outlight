@@ -36,6 +36,7 @@ public class Health : MonoBehaviour
 
     private void Kill()
     {
+        Events.HealthDestroyed(gameObject);
         Destroy(gameObject);
     }
 }
