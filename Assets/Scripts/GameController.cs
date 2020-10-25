@@ -1,15 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-using TMPro;
-using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
-    public GameObject EndGamePanel;
-    public TextMeshProUGUI EndGameText;
-    public Button EndGameButton;
     public int Money = 0;
 
     private void Awake()
@@ -18,8 +12,6 @@ public class GameController : MonoBehaviour
         Events.OnRequestMoney += OnRequestMoney;
         Events.OnHealthDestroyed += OnHealthDestroyed;
 
-        EndGamePanel.SetActive(false);
-        EndGameButton.onClick.AddListener(RestartGame);
     }
 
     public void Start()
@@ -55,31 +47,12 @@ public class GameController : MonoBehaviour
 
         if (structures.Length == 1 && structure != null)
         {
-            LoseLevel();
+            Events.EndLevel(false);
         }
         if (camps.Length == 1 && camp != null)
         {
-            WinLevel();
+            Events.EndLevel(true);
         }
     }
-    
-    void WinLevel()
-    {
-        Debug.Log("Level Won");
-        EndGameText.text = "VICTORY!";
-        EndGamePanel.SetActive(true);
-    }
 
-    void LoseLevel()
-    {
-        Debug.Log("Level Lost");
-        EndGameText.text = "LOST!";
-        EndGamePanel.SetActive(true);
-    }
-
-    void RestartGame()
-    {
-        // TODO change scene name in a better way
-        SceneManager.LoadScene("BrandonScene");
-    }
 }

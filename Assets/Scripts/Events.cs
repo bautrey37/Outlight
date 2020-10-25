@@ -26,5 +26,7 @@ public static class Events
     public static event Action<GameObject> OnHealthDestroyed;
     public static void HealthDestroyed(GameObject go) => OnHealthDestroyed?.Invoke(go);
 
+    public static event Action<bool> OnEndLevel;
+    public static void EndLevel(bool isWin) => OnEndLevel?.Invoke(isWin);
 
 }
