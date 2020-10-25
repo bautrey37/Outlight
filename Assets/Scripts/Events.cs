@@ -15,5 +15,9 @@ public static class Events
     public static event Action<StructureData> OnStructureSelected;
     public static void SelectStructure(StructureData structure) => OnStructureSelected?.Invoke(structure);
 
+    public static event Action<SkillsData> OnSkillSelected;
+
+    public static void SelectSkill(SkillsData skill) => OnSkillSelected?.Invoke(skill);
+
 
 }

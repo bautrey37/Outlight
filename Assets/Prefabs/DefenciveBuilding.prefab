@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a487fb3b88905349b3310691e1f2ac5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ShootDelay: 0.4
+  ShootDelay: 0.2
   BulletPrefab: {fileID: 6098228261532989901, guid: 9fc798c9e140adf48bcf5d5289d2637f, type: 3}
   EnemiesInRange: []
 --- !u!114 &865537652

@@ -15,6 +15,7 @@ public class Tower : MonoBehaviour
     private void Awake()
     {
         EnemiesInRange = new List<Health>();
+        NextShootTime = Time.time + ShootDelay;
     }
 
     private void Update()
@@ -28,24 +29,20 @@ public class Tower : MonoBehaviour
 
     private void Shoot()
     {
-        Health enemy = null;
-        while (EnemiesInRange.Count > 0)
+        Health closest = null;
+        float minVal = float.MaxValue;
+        EnemiesInRange = EnemiesInRange.FindAll(e => e != null);
+        EnemiesInRange.ForEach((enemy) =>
         {
-            if (EnemiesInRange[0] == null)
+            float val = (transform.position - enemy.transform.position).sqrMagnitude;
+            if (val < minVal)
             {
-                EnemiesInRange.RemoveAt(0);
+                closest = enemy;
+                minVal = val;
             }
-            else
-            {
-                enemy = EnemiesInRange[0];
-                break;
-            }
-        }
-        if (enemy == null) return;
-
-        Bullet projectile = GameObject.Instantiate(
-        BulletPrefab, this.transform.position, Quaternion.identity, null);
-        projectile.Target = enemy;
+        });
+        Bullet b = Instantiate(BulletPrefab, transform.position, Quaternion.identity, null);
+        b.Target = closest;
     }
     public void OnTriggerEnter2D(Collider2D collision)
     {
