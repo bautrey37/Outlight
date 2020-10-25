@@ -9,7 +9,6 @@ public class GameController : MonoBehaviour
     private void Awake()
     {
         Events.OnSetMoney += OnSetMoney;
-        Events.OnAddMoney += OnAddMoney;
         Events.OnRequestMoney += OnRequestMoney;
     }
 
@@ -21,7 +20,6 @@ public class GameController : MonoBehaviour
     private void OnDestroy()
     {
         Events.OnSetMoney -= OnSetMoney;
-        Events.OnAddMoney -= OnAddMoney;
         Events.OnRequestMoney -= OnRequestMoney;
     }
 
@@ -29,11 +27,6 @@ public class GameController : MonoBehaviour
     {
         //Debug.Log("Money changed: " + amount);
         Money = amount;
-    }
-    private void OnAddMoney(int amount)
-    {
-        //Debug.Log("Money changed: " + amount);
-        Money += amount;
     }
 
     private int OnRequestMoney()

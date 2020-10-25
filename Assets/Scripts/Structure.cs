@@ -10,18 +10,6 @@ public class Structure : MonoBehaviour
 
     private void Awake()
     {
-        HealthComponent = GetComponent<Health>();
-    }
-    // Start is called before the first frame update
-    void Start()
-    {
-        HealthComponent.CurrentHealth = structure.Health;
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        HealthComponent = gameObject.GetComponent<Health>();
     }
 }

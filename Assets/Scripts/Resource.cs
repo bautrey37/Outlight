@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class Resource : MonoBehaviour
 {
     public ResourceData res;
-    public bool Clickable = false;
 
     private void Update()
     {
@@ -15,21 +15,17 @@ public class Resource : MonoBehaviour
             Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Vector2 mousePos2D = new Vector2(mousePos.x, mousePos.y);
 
-            RaycastHit2D hit = Physics2D.Raycast(mousePos2D, Vector2.zero);
-            Debug.Log(hit.collider.name);
-            
-            if (hit.collider.gameObject == gameObject && Clickable)
+            RaycastHit2D[] hits = Physics2D.RaycastAll(mousePos2D, Vector2.zero);
+            foreach(RaycastHit2D hit in hits)
+            {
+                Debug.Log(hit.collider.name);
+            }
+
+            if (hits.Any((RaycastHit2D hit) => (hit.collider.gameObject == gameObject)) &&
+                hits.Any((RaycastHit2D hit) => (hit.collider.gameObject.GetComponent<LightSourceBehavior>() != null)))
             {
                 onClick();
             }
-        }
-    }
-
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        if (collision.gameObject.GetComponent<LightSourceBehavior>() != null)
-        {
-            Clickable = true;
         }
     }
 
