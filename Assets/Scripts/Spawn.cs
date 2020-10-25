@@ -4,15 +4,25 @@ using UnityEngine;
 
 public class Spawn : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public Enemy EnemyPrefab;
+    public float TimeBetweenSpawn = 5f;
+
+    private float nextSpawnTime = 0;
+
+    private void Update()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
+    void CheckIfEnemyIsSpawned()
     {
-        
+
+    }
+
+    void SpawnEnemy()
+    {
+        nextSpawnTime = Time.time + TimeBetweenSpawn;
+
+        GameObject.Instantiate(EnemyPrefab, transform.position, Quaternion.identity, null);
     }
 }
