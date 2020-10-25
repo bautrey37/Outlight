@@ -36,6 +36,7 @@ public class Resource : MonoBehaviour
     private void onClick()
     {
         Debug.Log("Gathered" + res.Income);
+        Events.AddMoney(res.Income);
         Destroy(gameObject);
     }
 }
