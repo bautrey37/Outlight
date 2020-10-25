@@ -40,7 +40,7 @@ public class Spawn : MonoBehaviour
 
     bool IsEnemySpawnAvailable()
     {
-        if (spawnedEnemies.Count > maxEnemies)
+        if (spawnedEnemies.Count >= maxEnemies)
         {
             return false;
         }
