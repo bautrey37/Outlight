@@ -20,7 +20,6 @@ public class StructureBuilder : MonoBehaviour
 
     private void OnDestroy()
     {
-
         Events.OnStructureSelected -= OnStructureSelected;
     }
 
@@ -37,6 +36,10 @@ public class StructureBuilder : MonoBehaviour
             if (!(comp is Transform) && !(comp is Renderer))
             {
                 Destroy(comp);
+            }
+            if (comp is Renderer)
+            {
+                ((Renderer)comp).sortingLayerName = "Darkness";
             }
         }
         gameObject.SetActive(true);
@@ -88,13 +91,13 @@ public class StructureBuilder : MonoBehaviour
         bool IsLightNearby = false;
         foreach (Collider2D overlap in overlaps)
         {
-            Debug.Log(overlap.gameObject.name);
-            if (overlap.gameObject.GetComponentInParent<LightSourceBehavior>() != null)
+            //Debug.Log(overlap.gameObject.name);
+            if (overlap.gameObject.GetComponentInParent<LightSourceBehavior>() != null || overlap.gameObject.GetComponent<LightSourceBehavior>() != null)
             {
                 IsLightNearby = true;
             }
         }
-        Debug.Log("Light: " + IsLightNearby);
+        //Debug.Log("Light: " + IsLightNearby);
         return IsLightNearby;
     }
 

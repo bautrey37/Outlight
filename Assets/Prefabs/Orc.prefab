@@ -98,6 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20b49147300b34f49987f6aadc142433, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EnemyData: {fileID: 11400000, guid: 8c209de99409e4dc5bc5d7dda31bc262, type: 2}
 --- !u!58 &6649246755894235182
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -127,7 +128,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHealth: 10
-  currentHealth: 0
 --- !u!50 &1842645689
 Rigidbody2D:
   serializedVersion: 4

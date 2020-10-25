@@ -4,25 +4,54 @@ using UnityEngine;
 
 public class Spawn : MonoBehaviour
 {
-    public Enemy EnemyPrefab;
-    public float TimeBetweenSpawn = 5f;
+    public EnemyData EnemyData;
+    public CampData CampData;
 
-    private float nextSpawnTime = 0;
+    private float timeBetweenSpawn = 5f;
+    private int maxEnemies = 1;
+    private List<Enemy> spawnedEnemies;
+    private float nextSpawnTime;
+
+    private void Awake()
+    {
+        spawnedEnemies = new List<Enemy>();
+        nextSpawnTime = Time.time;
+        timeBetweenSpawn = CampData.SpawnFrequency;
+        maxEnemies = CampData.MaxSpawnedEnemies;
+        GetComponent<Health>().MaxHealth = CampData.Health;
+    }
+
+    private void Start()
+    {
+        spawnedEnemies.Add(SpawnEnemy());
+    }
 
     private void Update()
     {
-        
+        spawnedEnemies = spawnedEnemies.FindAll(e => e != null);
+        if (IsEnemySpawnAvailable())
+        {
+            if (nextSpawnTime < Time.time)
+            {
+                spawnedEnemies.Add(SpawnEnemy());
+            }
+        }
     }
 
-    void CheckIfEnemyIsSpawned()
+    bool IsEnemySpawnAvailable()
     {
-
+        if (spawnedEnemies.Count > maxEnemies)
+        {
+            return false;
+        }
+        return true;
     }
 
-    void SpawnEnemy()
+    Enemy SpawnEnemy()
     {
-        nextSpawnTime = Time.time + TimeBetweenSpawn;
+        nextSpawnTime = Time.time + timeBetweenSpawn;
 
-        GameObject.Instantiate(EnemyPrefab, transform.position, Quaternion.identity, null);
+        Enemy enemy = GameObject.Instantiate(EnemyData.EnemyPrefab, transform.position, Quaternion.identity, null);
+        return enemy;
     }
 }

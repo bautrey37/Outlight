@@ -44,6 +44,7 @@ public class Tower : MonoBehaviour
         Bullet b = Instantiate(BulletPrefab, transform.position, Quaternion.identity, null);
         b.Target = closest;
     }
+
     public void OnTriggerEnter2D(Collider2D collision)
     {
         Health enemy = collision.GetComponent<Health>();

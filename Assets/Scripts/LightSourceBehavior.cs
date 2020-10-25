@@ -31,4 +31,6 @@ public class LightSourceBehavior : MonoBehaviour
             Destroy(instance);
         }
     }
+
+    
 }

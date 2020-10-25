@@ -4,18 +4,28 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    public EnemyData EnemyData;
+
     private Transform target;
     private List<Transform> TargetsInRange;
-    private float speed = 1f;
+    private float movementSpeed;
+    private int attackStrength;
+    private float attackSpeed;
+    private float attackDistance = 0.03f;
+
+    private float nextAttack = 0f;
 
     private void Awake()
     {
         TargetsInRange = new List<Transform>();
+        movementSpeed = EnemyData.Speed;
+        attackStrength = EnemyData.AttackStrength;
+        attackSpeed = EnemyData.AttackSpeed;
+        GetComponent<Health>().MaxHealth = EnemyData.Health;
     }
 
     void Start()
     {
-        
     }
 
     void Update()
@@ -23,12 +33,15 @@ public class Enemy : MonoBehaviour
         FindClosestTarget();
         if (target != null)
         {
-            float step = speed * Time.deltaTime; // calculate distance to move
+            float step = movementSpeed * Time.deltaTime; // calculate distance to move
             transform.position = Vector2.MoveTowards(transform.position, target.position, step);
 
-            if (Vector3.Distance(transform.position, target.position) < 0.001f)
+            if (Vector3.Distance(transform.position, target.position) < attackDistance)
             {
-                Debug.Log("Reached Target");
+                if (nextAttack < Time.time)
+                {
+                    Attack();
+                }
             }
         }
     }
@@ -36,6 +49,8 @@ public class Enemy : MonoBehaviour
     void FindClosestTarget()
     {
         if (TargetsInRange.Count.Equals(0)) return;
+
+        TargetsInRange = TargetsInRange.FindAll(e => e != null);
 
         Transform ClosestDistance = null;
         foreach (Transform target in TargetsInRange)
@@ -51,15 +66,26 @@ public class Enemy : MonoBehaviour
                 Debug.Log("Found new closest target");
             }   
         }
-        // remove walking on waypoint to now follow target
 
+        // switch to now follow target instead of waypoint
+        WaypointFollower WF = GetComponent<WaypointFollower>();
+        if (WF != null) WF.Waypoint = null;
 
         target = ClosestDistance;
     }
 
+    void Attack()
+    {
+        Debug.Log("Attack Target");
+        Health targetHealth = target.GetComponent<Health>();
+        if (targetHealth != null) targetHealth.Damage(attackStrength);
+        nextAttack = Time.time + attackSpeed;
+        FindClosestTarget();
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Health target = collision.GetComponent<Health>();
+        Structure target = collision.GetComponent<Structure>();
         if (target != null)
         {
             TargetsInRange.Add(target.transform);
@@ -68,7 +94,7 @@ public class Enemy : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        Health target = collision.GetComponent<Health>();
+        Structure target = collision.GetComponent<Structure>();
         if (target != null)
         {
             TargetsInRange.Remove(target.transform);
@@ -77,7 +103,7 @@ public class Enemy : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        Health target = collision.GetComponent<Health>();
+        Structure target = collision.GetComponent<Structure>();
         if (target != null)
         {
             if (TargetsInRange.Contains(target.transform))
