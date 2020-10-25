@@ -18,14 +18,14 @@ public class Enemy : MonoBehaviour
     private void Awake()
     {
         TargetsInRange = new List<Transform>();
-    }
-
-    void Start()
-    {
         movementSpeed = EnemyData.Speed;
         attackStrength = EnemyData.AttackStrength;
         attackSpeed = EnemyData.AttackSpeed;
         GetComponent<Health>().MaxHealth = EnemyData.Health;
+    }
+
+    void Start()
+    {
     }
 
     void Update()
@@ -78,7 +78,7 @@ public class Enemy : MonoBehaviour
     {
         Debug.Log("Attack Target");
         Health targetHealth = target.GetComponent<Health>();
-        targetHealth.Damage(attackStrength);
+        if (targetHealth != null) targetHealth.Damage(attackStrength);
         nextAttack = Time.time + attackSpeed;
         FindClosestTarget();
     }

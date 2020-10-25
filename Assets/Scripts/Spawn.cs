@@ -5,9 +5,10 @@ using UnityEngine;
 public class Spawn : MonoBehaviour
 {
     public EnemyData EnemyData;
-    public float TimeBetweenSpawn = 5f;
-    public int MaxEnemies = 1;
+    public CampData CampData;
 
+    private float timeBetweenSpawn = 5f;
+    private int maxEnemies = 1;
     private List<Enemy> spawnedEnemies;
     private float nextSpawnTime;
 
@@ -15,6 +16,9 @@ public class Spawn : MonoBehaviour
     {
         spawnedEnemies = new List<Enemy>();
         nextSpawnTime = Time.time;
+        timeBetweenSpawn = CampData.SpawnFrequency;
+        maxEnemies = CampData.MaxSpawnedEnemies;
+        GetComponent<Health>().MaxHealth = CampData.Health;
     }
 
     private void Start()
@@ -36,7 +40,7 @@ public class Spawn : MonoBehaviour
 
     bool IsEnemySpawnAvailable()
     {
-        if (spawnedEnemies.Count > MaxEnemies)
+        if (spawnedEnemies.Count > maxEnemies)
         {
             return false;
         }
@@ -45,7 +49,7 @@ public class Spawn : MonoBehaviour
 
     Enemy SpawnEnemy()
     {
-        nextSpawnTime = Time.time + TimeBetweenSpawn;
+        nextSpawnTime = Time.time + timeBetweenSpawn;
 
         Enemy enemy = GameObject.Instantiate(EnemyData.EnemyPrefab, transform.position, Quaternion.identity, null);
         return enemy;

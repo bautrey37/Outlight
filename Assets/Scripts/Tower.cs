@@ -47,6 +47,7 @@ public class Tower : MonoBehaviour
         BulletPrefab, this.transform.position, Quaternion.identity, null);
         projectile.Target = enemy;
     }
+
     public void OnTriggerEnter2D(Collider2D collision)
     {
         Health enemy = collision.GetComponent<Health>();
