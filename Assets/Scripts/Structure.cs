@@ -13,8 +13,11 @@ public class Structure : MonoBehaviour
         HealthComponent = gameObject.GetComponent<Health>();
     }
 
-    private void Update()
+    private void Start()
     {
-    
+        if (HealthComponent != null)
+        {
+
+        }
     }
 }

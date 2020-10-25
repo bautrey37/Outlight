@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6649246755894235182}
   - component: {fileID: 2918116924018820720}
   - component: {fileID: 1842645689}
+  - component: {fileID: 782348618523444088}
   m_Layer: 0
   m_Name: Orc
   m_TagString: Untagged
@@ -114,7 +115,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 5
+  m_Radius: 7.18
 --- !u!114 &2918116924018820720
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -127,7 +128,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e70f96577dcb4a4fa30d6c087cc086f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHealth: 10
 --- !u!50 &1842645689
 Rigidbody2D:
   serializedVersion: 4
@@ -149,3 +149,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!95 &782348618523444088
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7434834059746952493}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b4eedce922cca4b4fa178dcf5e0fa152, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

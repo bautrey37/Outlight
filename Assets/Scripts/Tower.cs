@@ -58,6 +58,7 @@ public class Tower : MonoBehaviour
             EnemiesInRange.Add(enemy);
         }
     }
+    
 
     public void OnTriggerExit2D(Collider2D collision)
     {

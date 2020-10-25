@@ -11,7 +11,7 @@ public class Enemy : MonoBehaviour
     private float movementSpeed;
     private int attackStrength;
     private float attackSpeed;
-    private float attackDistance = 0.03f;
+    private float attackDistance = 0.5f;
     private float nextAttack = 0f;
     private SpriteRenderer spriteRenderer;
 
@@ -34,9 +34,6 @@ public class Enemy : MonoBehaviour
         FindClosestTarget();
         if (target != null)
         {
-            float step = movementSpeed * Time.deltaTime; // calculate distance to move
-            transform.position = Vector2.MoveTowards(transform.position, target.position, step);
-
             if (target.position.x < transform.position.x) spriteRenderer.flipX = true;
 
             if (Vector3.Distance(transform.position, target.position) < attackDistance)
@@ -45,6 +42,10 @@ public class Enemy : MonoBehaviour
                 {
                     Attack();
                 }
+            } else
+            {
+                float step = movementSpeed * Time.deltaTime; // calculate distance to move
+                transform.position = Vector2.MoveTowards(transform.position, target.position, step);
             }
         }
     }

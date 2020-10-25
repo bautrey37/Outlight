@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Basic Camp
   Health: 30
-  MaxSpawnedEnemies: 1
-  SpawnFrequency: 5
+  MaxSpawnedEnemies: 0
+  SpawnFrequency: 100
   CampPrefab: {fileID: 476819216285811338, guid: f8bde84353b4f40ada3bfed22fbb17a5, type: 3}

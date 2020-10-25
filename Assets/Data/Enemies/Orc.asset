@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Orc
   m_EditorClassIdentifier: 
   Name: Orc
-  Health: 10
+  Health: 3
   AttackStrength: 1
   AttackSpeed: 0.3
   Speed: 1
