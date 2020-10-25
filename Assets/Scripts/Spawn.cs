@@ -6,29 +6,48 @@ public class Spawn : MonoBehaviour
 {
     public EnemyData EnemyData;
     public float TimeBetweenSpawn = 5f;
-    
-    private float nextSpawnTime = 0;
-    private float checkDistanceRadius = 2f;
+    public int MaxEnemies = 1;
+
+    private List<Enemy> spawnedEnemies;
+    private float nextSpawnTime;
+
+    private void Awake()
+    {
+        spawnedEnemies = new List<Enemy>();
+        nextSpawnTime = Time.time;
+    }
 
     private void Start()
     {
-        SpawnEnemy();
+        spawnedEnemies.Add(SpawnEnemy());
     }
 
     private void Update()
     {
-        
+        spawnedEnemies = spawnedEnemies.FindAll(e => e != null);
+        if (IsEnemySpawnAvailable())
+        {
+            if (nextSpawnTime < Time.time)
+            {
+                spawnedEnemies.Add(SpawnEnemy());
+            }
+        }
     }
 
-    void CheckIfEnemyIsSpawned()
+    bool IsEnemySpawnAvailable()
     {
-
+        if (spawnedEnemies.Count > MaxEnemies)
+        {
+            return false;
+        }
+        return true;
     }
 
-    void SpawnEnemy()
+    Enemy SpawnEnemy()
     {
         nextSpawnTime = Time.time + TimeBetweenSpawn;
 
         Enemy enemy = GameObject.Instantiate(EnemyData.EnemyPrefab, transform.position, Quaternion.identity, null);
+        return enemy;
     }
 }

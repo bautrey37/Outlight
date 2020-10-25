@@ -91,13 +91,13 @@ public class StructureBuilder : MonoBehaviour
         bool IsLightNearby = false;
         foreach (Collider2D overlap in overlaps)
         {
-            Debug.Log(overlap.gameObject.name);
+            //Debug.Log(overlap.gameObject.name);
             if (overlap.gameObject.GetComponentInParent<LightSourceBehavior>() != null || overlap.gameObject.GetComponent<LightSourceBehavior>() != null)
             {
                 IsLightNearby = true;
             }
         }
-        Debug.Log("Light: " + IsLightNearby);
+        //Debug.Log("Light: " + IsLightNearby);
         return IsLightNearby;
     }
 
