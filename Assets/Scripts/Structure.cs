@@ -12,4 +12,9 @@ public class Structure : MonoBehaviour
     {
         HealthComponent = gameObject.GetComponent<Health>();
     }
+
+    private void Update()
+    {
+    
+    }
 }

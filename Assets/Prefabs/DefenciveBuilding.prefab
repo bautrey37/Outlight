@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2931258402302244383}
   - component: {fileID: 2931258402302244382}
   - component: {fileID: 2931258402302244380}
+  - component: {fileID: 3313617827755794767}
   - component: {fileID: 865537652}
   - component: {fileID: 865537653}
   m_Layer: 0
@@ -98,9 +99,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a487fb3b88905349b3310691e1f2ac5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ShootDelay: 0.2
+  ShootDelay: 1
   BulletPrefab: {fileID: 6098228261532989901, guid: 9fc798c9e140adf48bcf5d5289d2637f, type: 3}
   EnemiesInRange: []
+--- !u!114 &3313617827755794767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2931258402302244379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e70f96577dcb4a4fa30d6c087cc086f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &865537652
 MonoBehaviour:
   m_ObjectHideFlags: 0
