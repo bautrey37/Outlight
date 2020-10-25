@@ -4,10 +4,18 @@ using UnityEngine;
 
 public class Structure : MonoBehaviour
 {
-    
+    StructureData structure;
+
+    Health HealthComponent;
+
+    private void Awake()
+    {
+        HealthComponent = GetComponent<Health>();
+    }
     // Start is called before the first frame update
     void Start()
     {
+        HealthComponent.CurrentHealth = structure.Health;
         
     }
 
