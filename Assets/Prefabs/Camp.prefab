@@ -11,6 +11,10 @@ GameObject:
   - component: {fileID: 5785689715987061785}
   - component: {fileID: 5785689715987061784}
   - component: {fileID: 5785689715987061791}
+  - component: {fileID: 897866595}
+  - component: {fileID: 476819216285811338}
+  - component: {fileID: 3848638487557544346}
+  - component: {fileID: 3279363426972766719}
   m_Layer: 0
   m_Name: Camp
   m_TagString: Untagged
@@ -96,4 +100,65 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyData: {fileID: 11400000, guid: 8c209de99409e4dc5bc5d7dda31bc262, type: 2}
-  TimeBetweenSpawn: 5
+  CampData: {fileID: 11400000, guid: eb89bcababc2341fb8febace324d9b94, type: 2}
+--- !u!114 &897866595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5785689715987061790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e70f96577dcb4a4fa30d6c087cc086f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &476819216285811338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5785689715987061790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63fcae6bbc33f45de899e691b1965f31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!58 &3848638487557544346
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5785689715987061790}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.65
+--- !u!50 &3279363426972766719
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5785689715987061790}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
