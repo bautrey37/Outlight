@@ -8,4 +8,9 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene("RuslanScene");
     }
+
+    public void Exit()
+    {
+        Application.Quit();
+    }
 }
