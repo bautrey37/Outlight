@@ -51,7 +51,7 @@ public class EndPanelPresenter : MonoBehaviour
 
     void RestartGame()
     {
-        // TODO change scene name in a better way
-        SceneManager.LoadScene("BrandonScene");
+        gameObject.SetActive(false);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

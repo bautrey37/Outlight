@@ -11,12 +11,13 @@ public class GameController : MonoBehaviour
         Events.OnSetMoney += OnSetMoney;
         Events.OnRequestMoney += OnRequestMoney;
         Events.OnHealthDestroyed += OnHealthDestroyed;
+        Events.SetMoney(Money);
 
     }
 
     public void Start()
     {
-        Events.SetMoney(Money);
+        
     }
 
     private void OnDestroy()

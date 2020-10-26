@@ -112,6 +112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68e9bd86adcef4543a0d85513d127f66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  structure: {fileID: 0}
 --- !u!114 &871217977973459553
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -154,7 +155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b5fd1da47a670f47b2970be4975b267, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimeBetweenCoin: 5
+  TimeBetweenCoin: 1
 --- !u!58 &1670869270
 CircleCollider2D:
   m_ObjectHideFlags: 0

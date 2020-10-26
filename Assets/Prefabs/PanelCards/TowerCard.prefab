@@ -346,3 +346,4 @@ MonoBehaviour:
   StructureData: {fileID: 11400000, guid: 9f16154d5fd6714489bcb0afd21ba466, type: 2}
   CostText: {fileID: 8819007978513258403}
   IconImage: {fileID: 8819007980097016528}
+  button: {fileID: 8819007980542199683}

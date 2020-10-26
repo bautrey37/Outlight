@@ -12,28 +12,23 @@ public class StructureCardPresenter : MonoBehaviour
     public TextMeshProUGUI CostText;
     // public TextMeshProUGUI ShortcutText;
     public Image IconImage;
-
-    private Button button;
+    public Button button;
 
 
     private void Awake()
     {
-        button = GetComponent<Button>();
-        if (button!=null)
-        {
-            button.onClick.AddListener(Pressed);
-        }
+    }
 
+    private void Start()
+    {
+        button = GetComponent<Button>();
         if (StructureData != null)
         {
             CostText.text = StructureData.Cost.ToString();
             // ShortcutText.text = StructureData.Shortcut;
             IconImage.sprite = StructureData.Icon;
         }
-    }
-
-    private void Start()
-    {
+        button.onClick.AddListener(Pressed);
         Events.OnSetMoney += OnSetMoney;
     }
 
