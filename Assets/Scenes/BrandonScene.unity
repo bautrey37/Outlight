@@ -782,35 +782,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7295690359524487007, guid: e0bcab4e10e4ae04b8a3de26c5f74ef4, type: 3}
   m_PrefabInstance: {fileID: 1195810295}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1203377902 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1910267220706215729, guid: b8171b4277cd24145968e2e344d7b6fc, type: 3}
-  m_PrefabInstance: {fileID: 1910267221775372767}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!1 &1260636329 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5008081127199396234, guid: cc82c2fbf0b864aa19334070b7ee4e5f, type: 3}
-  m_PrefabInstance: {fileID: 5008081126106484763}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1260636330
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1260636329}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62b82da5bc4a3463fa2097dd97d49de6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AudioSourcePrefab: {fileID: 2276731152611876337, guid: 4121f0a1784564701aae9f5ca57bd054, type: 3}
 --- !u!1 &1365244331
 GameObject:
   m_ObjectHideFlags: 0
@@ -939,27 +910,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1394872875 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1910267220917371892, guid: b8171b4277cd24145968e2e344d7b6fc, type: 3}
-  m_PrefabInstance: {fileID: 1910267221775372767}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &1394872876 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1910267220917371891, guid: b8171b4277cd24145968e2e344d7b6fc, type: 3}
   m_PrefabInstance: {fileID: 1910267221775372767}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1423562743 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1910267221023098408, guid: b8171b4277cd24145968e2e344d7b6fc, type: 3}
-  m_PrefabInstance: {fileID: 1910267221775372767}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1582848854
 GameObject:
   m_ObjectHideFlags: 0
@@ -3992,18 +3947,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
-    - target: {fileID: 5008081127199396239, guid: cc82c2fbf0b864aa19334070b7ee4e5f, type: 3}
-      propertyPath: EndGamePanel
-      value: 
-      objectReference: {fileID: 1394872875}
-    - target: {fileID: 5008081127199396239, guid: cc82c2fbf0b864aa19334070b7ee4e5f, type: 3}
-      propertyPath: EndGameText
-      value: 
-      objectReference: {fileID: 1203377902}
-    - target: {fileID: 5008081127199396239, guid: cc82c2fbf0b864aa19334070b7ee4e5f, type: 3}
-      propertyPath: EndGameButton
-      value: 
-      objectReference: {fileID: 1423562743}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc82c2fbf0b864aa19334070b7ee4e5f, type: 3}
 --- !u!1001 &5785689716750698364
