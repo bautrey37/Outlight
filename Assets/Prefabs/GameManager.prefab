@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5008081127199396232}
   - component: {fileID: 5008081127199396233}
   - component: {fileID: 5008081127199396239}
+  - component: {fileID: 1260636330}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -59,7 +60,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3fee3b02ab0e46428f7f5ae267dc78e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EndGamePanel: {fileID: 0}
-  EndGameText: {fileID: 0}
-  EndGameButton: {fileID: 0}
   Money: 10
+--- !u!114 &1260636330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5008081127199396234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62b82da5bc4a3463fa2097dd97d49de6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AudioSourcePrefab: {fileID: 2276731152611876337, guid: 4121f0a1784564701aae9f5ca57bd054, type: 3}
