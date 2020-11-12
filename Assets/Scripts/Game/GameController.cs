@@ -29,7 +29,6 @@ public class GameController : MonoBehaviour
 
     private void OnSetMoney(int amount)
     {
-        //Debug.Log("Money changed: " + amount);
         Money = amount;
     }
 

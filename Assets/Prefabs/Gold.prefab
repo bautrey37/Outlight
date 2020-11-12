@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   res: {fileID: 11400000, guid: b8cb92b51e0a3f54e8e39e0ea8a95007, type: 2}
-  Clickable: 0
+  CoinDropAudio: {fileID: 11400000, guid: a4c05b3f6b48c440cbc251e28e405d34, type: 2}
 --- !u!58 &7542237313979210558
 CircleCollider2D:
   m_ObjectHideFlags: 0

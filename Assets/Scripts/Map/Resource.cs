@@ -7,6 +7,7 @@ using UnityEngine;
 public class Resource : MonoBehaviour
 {
     public ResourceData res;
+    public AudioClipGroup CoinDropAudio;
 
     private void Update()
     {
@@ -32,6 +33,7 @@ public class Resource : MonoBehaviour
     private void onClick()
     {
         Debug.Log("Gathered" + res.Income);
+        CoinDropAudio.Play();
         Events.AddMoney(res.Income);
         Destroy(gameObject);
     }

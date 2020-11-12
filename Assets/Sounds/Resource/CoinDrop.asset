@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cad80b68131e4cacbc0f7021d48e560, type: 3}
+  m_Name: CoinDrop
+  m_EditorClassIdentifier: 
+  VolumeMin: 0.93
+  VolumeMax: 1.08
+  PitchMin: 0.88
+  PitchMax: 1.11
+  Cooldown: 0.1
+  Clips:
+  - {fileID: 8300000, guid: b95e98d77857d4b6f8010f8cb75fd05c, type: 3}
+  - {fileID: 8300000, guid: 31320ce52ae6f490aac2b84f66ddcdb7, type: 3}
+  - {fileID: 8300000, guid: fb66ebc149054411ea717c7df2fa3dd6, type: 3}
+  - {fileID: 8300000, guid: 3f9e25558ecb24a1c83cfa91c9968f18, type: 3}
