@@ -73,7 +73,7 @@ public class StructureBuilder : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             Build();
-            currentStructureData.BuildSound.Play();
+           
         }
         if (Input.GetMouseButtonDown(1))
         {
@@ -119,5 +119,6 @@ public class StructureBuilder : MonoBehaviour
 
         Instantiate(currentStructureData.StructurePrefab, transform.position, Quaternion.identity, null);
         gameObject.SetActive(false);
+        currentStructureData.BuildSound.Play();
     }
 }
