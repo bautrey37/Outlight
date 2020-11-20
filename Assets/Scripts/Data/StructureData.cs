@@ -11,4 +11,6 @@ public class StructureData : ScriptableObject
     public string Shortcut;
     public Sprite Icon;
     public Structure StructurePrefab;
+    public AudioClipGroup BuildSound;
+
 }

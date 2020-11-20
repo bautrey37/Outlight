@@ -73,6 +73,7 @@ public class StructureBuilder : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             Build();
+            currentStructureData.BuildSound.Play();
         }
         if (Input.GetMouseButtonDown(1))
         {

@@ -18,3 +18,4 @@ MonoBehaviour:
   Shortcut: Alpha2
   Icon: {fileID: 21300000, guid: bce65870415b4dc40bfa4d6dc2fe954b, type: 3}
   StructurePrefab: {fileID: 865537652, guid: 90dcf655fd118ad4a91a4d6d452f7511, type: 3}
+  BuildSound: {fileID: 11400000, guid: ff4382786043a964da66ded76f08a8ee, type: 2}

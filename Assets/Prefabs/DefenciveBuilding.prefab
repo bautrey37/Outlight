@@ -52,6 +52,7 @@ MonoBehaviour:
   ShootDelay: 1
   BulletPrefab: {fileID: 6098228261532989901, guid: 9fc798c9e140adf48bcf5d5289d2637f, type: 3}
   EnemiesInRange: []
+  ArrowShot: {fileID: 11400000, guid: 42b97188c35a5a74785774c39ef2693d, type: 2}
 --- !u!114 &3313617827755794767
 MonoBehaviour:
   m_ObjectHideFlags: 0

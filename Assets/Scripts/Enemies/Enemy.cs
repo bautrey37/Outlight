@@ -46,6 +46,7 @@ public class Enemy : MonoBehaviour
             {
                 float step = movementSpeed * Time.deltaTime; // calculate distance to move
                 transform.position = Vector2.MoveTowards(transform.position, target.position, step);
+                EnemyData.Moving.Play();
             }
         }
     }
