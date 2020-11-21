@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MirasTestScene.unity
     guid: 391655b7650b4834fb08ae9fa349ffcc
+  - enabled: 1
+    path: Assets/Scenes/Main.unity
+    guid: 2b61529d5009b4dc1ad97d1649c5cdf5
   m_configObjects: {}
