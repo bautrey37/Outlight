@@ -85,6 +85,7 @@ public class Enemy : MonoBehaviour
         Health targetHealth = target.GetComponent<Health>();
         if (targetHealth != null) targetHealth.Damage(attackStrength);
         nextAttack = Time.time + attackSpeed;
+        EnemyData.Attack.Play();
         FindClosestTarget();
     }
 

@@ -12,4 +12,5 @@ public class EnemyData : ScriptableObject
     public float Speed;
     public Enemy EnemyPrefab;
     public AudioClipGroup Moving;
+    public AudioClipGroup Attack;
 }

@@ -6,43 +6,57 @@ using TMPro;
 using System;
 
 
-public class SkillPresenter : MonoBehaviour { 
-
-public SkillsData SkillsData;
-
-public TextMeshProUGUI CostText;
-// public TextMeshProUGUI ShortcutText;
-public Image IconImage;
-
-private Button button;
-
-private void Awake()
+public class SkillPresenter : MonoBehaviour
 {
-    button = GetComponent<Button>();
-    if (button != null)
+
+    public SkillsData SkillsData;
+
+    public TextMeshProUGUI CostText;
+    // public TextMeshProUGUI ShortcutText;
+    public Image IconImage;
+
+    public Button button;
+
+
+
+    private void Start()
     {
-        button.onClick.AddListener(Pressed);
+        button = GetComponent<Button>();
+        if (button != null)
+        {
+            button.onClick.AddListener(Pressed);
+        }
+
+        if (SkillsData != null)
+        {
+            CostText.text = SkillsData.Cost.ToString();
+            // ShortcutText.text = StructureData.Shortcut;
+            IconImage.sprite = SkillsData.Icon;
+        }
+        Events.OnSetMoney += OnSetMoney;
     }
 
-    if (SkillsData != null)
+    private void OnSetMoney(int value)
     {
-        CostText.text = SkillsData.Cost.ToString();
-        // ShortcutText.text = StructureData.Shortcut;
-        IconImage.sprite = SkillsData.Icon;
+        button.interactable = value >= SkillsData.Cost;
     }
-}
 
-private void Update()
-{
-    if (Input.GetKeyDown((KeyCode)Enum.Parse(typeof(KeyCode), SkillsData.Shortcut)))
+
+    private void Update()
     {
-        Pressed();
+        if (button.interactable && Input.GetKeyDown((KeyCode)Enum.Parse(typeof(KeyCode), SkillsData.Shortcut)))
+        {
+            Pressed();
+
+
+        }
     }
-}
-public void Pressed()
-{
-     Debug.Log("Pressed");
-     Events.SelectSkill(SkillsData);
-}
+    public void Pressed()
+    {
+
+        Events.SelectSkill(SkillsData);
+        Events.RemoveMoney(SkillsData.Cost);
+        Debug.Log("Pressed");
+    }
 
 }

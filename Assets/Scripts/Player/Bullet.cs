@@ -8,6 +8,7 @@ public class Bullet : MonoBehaviour
     public float Speed = 10;
     public int Damage = 1;
 
+  
     private void Update()
     {
         if ( Target!= null )

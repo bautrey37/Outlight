@@ -19,3 +19,4 @@ MonoBehaviour:
   Speed: 1
   EnemyPrefab: {fileID: 8954180201819554369, guid: b06c629128907467885d753830d5ec83, type: 3}
   Moving: {fileID: 11400000, guid: afe4318aa114c0e46ac4375e275a6aad, type: 2}
+  Attack: {fileID: 11400000, guid: cb3d189d0ea9c154f8c8aee690e7c6b6, type: 2}
