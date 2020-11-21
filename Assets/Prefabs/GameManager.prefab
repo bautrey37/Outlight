@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5008081127199396233}
   - component: {fileID: 5008081127199396239}
   - component: {fileID: 1260636330}
+  - component: {fileID: 8336684980528356858}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -61,6 +62,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Money: 10
+  BackgroundMusic: {fileID: 11400000, guid: 408a8c6ff8c537c4888877e594fc7af5, type: 2}
 --- !u!114 &1260636330
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -74,3 +76,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AudioSourcePrefab: {fileID: 2276731152611876337, guid: 4121f0a1784564701aae9f5ca57bd054, type: 3}
+--- !u!114 &8336684980528356858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5008081127199396234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c404c3863e7f7499c831babda86bf39b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

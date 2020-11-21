@@ -228,6 +228,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EndGameText: {fileID: 1910267220706215729}
   EndGameButton: {fileID: 1910267221023098408}
+  WinSound: {fileID: 0}
 --- !u!1 &1910267221023098410
 GameObject:
   m_ObjectHideFlags: 0
@@ -241,7 +242,7 @@ GameObject:
   - component: {fileID: 1910267221023098407}
   - component: {fileID: 1910267221023098408}
   m_Layer: 5
-  m_Name: RestartButton
+  m_Name: MenuButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -413,7 +414,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Restart Game?
+  m_text: Back to Menu
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

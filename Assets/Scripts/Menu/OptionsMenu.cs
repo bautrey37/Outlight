@@ -6,16 +6,20 @@ public class OptionsMenu : MonoBehaviour
 {
     public static OptionsMenu Instance;
 
-    private float optionsVolume;
-    public float OptionsVolume
+    public float MusicVolume
     {
-        get { return this.optionsVolume; }
-        set { Debug.Log(value);  this.optionsVolume = value; }
+        get { return GameSettings.Instance.MusicVolume; }
+        set { GameSettings.Instance.MusicVolume = value; }
     }
 
-    public void Awake()
+    public float InteractionVolume
+    {
+        get { return GameSettings.Instance.InteractionVolume; }
+        set { GameSettings.Instance.InteractionVolume = value; }
+    }
+
+    private void Awake()
     {
         Instance = this;
     }
-
 }

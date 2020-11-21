@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3cad80b68131e4cacbc0f7021d48e560, type: 3}
-  m_Name: WinSound
+  m_Name: BackGroundSound
   m_EditorClassIdentifier: 
   VolumeMin: 0.93
   VolumeMax: 1.08
@@ -18,4 +18,4 @@ MonoBehaviour:
   PitchMax: 1.11
   Cooldown: 0.1
   Clips:
-  - {fileID: 8300000, guid: 0f950bbb72cdc994bb12fa271bb2e102, type: 3}
+  - {fileID: 8300000, guid: 37070d6b6491e7f47b205127a470041b, type: 3}

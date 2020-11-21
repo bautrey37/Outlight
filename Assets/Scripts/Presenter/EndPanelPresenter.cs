@@ -13,7 +13,7 @@ public class EndPanelPresenter : MonoBehaviour
     private void Awake()
     {
         gameObject.SetActive(false);
-        EndGameButton.onClick.AddListener(RestartGame);
+        EndGameButton.onClick.AddListener(GotoMenu);
 
         Events.OnEndLevel += OnEndLevel;
     }
@@ -50,9 +50,9 @@ public class EndPanelPresenter : MonoBehaviour
         gameObject.SetActive(true);
     }
 
-    void RestartGame()
+    void GotoMenu()
     {
         gameObject.SetActive(false);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene("Menu");
     }
 }

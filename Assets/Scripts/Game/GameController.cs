@@ -6,7 +6,7 @@ public class GameController : MonoBehaviour
 {
     public int Money = 0;
     public AudioClipGroup BackgroundMusic;
-    private bool EndLevel = false;
+    //private bool EndLevel = false;
 
     private void Awake()
     {
