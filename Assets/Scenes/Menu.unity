@@ -723,7 +723,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &436788861
 GameObject:
@@ -993,7 +993,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &520973343
 GameObject:
@@ -1606,6 +1606,7 @@ GameObject:
   - component: {fileID: 1067184812}
   - component: {fileID: 1067184811}
   - component: {fileID: 1067184810}
+  - component: {fileID: 1067184814}
   m_Layer: 0
   m_Name: OptionsMenu
   m_TagString: Untagged
@@ -1645,7 +1646,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1067184808}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63414440575be42489a8f3e054737c63, type: 3}
+  m_Script: {fileID: 11500000, guid: c404c3863e7f7499c831babda86bf39b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1067184811
@@ -1712,6 +1713,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1067184808}
   m_CullTransparentMesh: 0
+--- !u!114 &1067184814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1067184808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63414440575be42489a8f3e054737c63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MusicVolume: {fileID: 1463112754}
+  InteractionVolume: {fileID: 1965090728}
 --- !u!1 &1087180021
 GameObject:
   m_ObjectHideFlags: 0
@@ -2375,7 +2390,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MainMenu: {fileID: 2075584696}
   LevelsMenu: {fileID: 1087180023}
-  OptionsMenu: {fileID: 1067184810}
+  OptionsMenu: {fileID: 0}
 --- !u!114 &1366913070
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2583,13 +2598,13 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1067184808}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 1067184810}
+        m_TargetAssemblyTypeName: GameSettings, Assembly-CSharp
+        m_MethodName: set_MusicVolume
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2872,7 +2887,7 @@ RectTransform:
   - {fileID: 947122964}
   - {fileID: 1366913068}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3518,8 +3533,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1067184810}
-        m_TargetAssemblyTypeName: OptionsMenu, Assembly-CSharp
-        m_MethodName: set_OptionsVolume
+        m_TargetAssemblyTypeName: GameSettings, Assembly-CSharp
+        m_MethodName: set_InteractionVolume
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

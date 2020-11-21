@@ -1,25 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class OptionsMenu : MonoBehaviour
 {
-    public static OptionsMenu Instance;
+    public Slider MusicVolume;
+    public Slider InteractionVolume;
 
-    public float MusicVolume
+    private void Start()
     {
-        get { return GameSettings.Instance.MusicVolume; }
-        set { GameSettings.Instance.MusicVolume = value; }
-    }
-
-    public float InteractionVolume
-    {
-        get { return GameSettings.Instance.InteractionVolume; }
-        set { GameSettings.Instance.InteractionVolume = value; }
-    }
-
-    private void Awake()
-    {
-        Instance = this;
+        MusicVolume.value = GameSettings.Instance.MusicVolume;
+        InteractionVolume.value = GameSettings.Instance.InteractionVolume;
     }
 }

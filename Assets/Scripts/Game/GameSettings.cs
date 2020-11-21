@@ -6,25 +6,26 @@ public class GameSettings : MonoBehaviour
 {
     public static GameSettings Instance;
 
-    private float musicVolume;
     public float MusicVolume
     {
-        get { return musicVolume; }
-        set { musicVolume = value; }
+        get { return PlayerPrefs.GetFloat("IVolume"); }
+        set
+        {
+            PlayerPrefs.SetFloat("MVolume", value);
+        }
     }
 
-    private float interactionVolume;
     public float InteractionVolume
     {
-        get { return interactionVolume; }
-        set { interactionVolume = value; }
+        get { return PlayerPrefs.GetFloat("IVolume"); }
+        set
+        {
+            PlayerPrefs.SetFloat("IVolume", value);
+        }
     }
 
     void Awake()
     {
         Instance = this;
-
-        MusicVolume = 1;
-        InteractionVolume = 1;
     }
 }
