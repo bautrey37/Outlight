@@ -6,11 +6,12 @@ public class MainMenu : MonoBehaviour
 {
     public void PlayGame()
     {
-        SceneManager.LoadScene("RuslanScene");
+        SceneManager.LoadScene("MirasTestScene");
     }
 
-    public void Exit()
+    public void QuitGame()
     {
+        Debug.Log("QUIT");
         Application.Quit();
     }
 }
