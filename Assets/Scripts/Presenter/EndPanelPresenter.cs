@@ -9,7 +9,7 @@ public class EndPanelPresenter : MonoBehaviour
 {
     public TextMeshProUGUI EndGameText;
     public Button EndGameButton;
-
+    public AudioClipGroup WinSound;
     private void Awake()
     {
         gameObject.SetActive(false);
@@ -40,6 +40,7 @@ public class EndPanelPresenter : MonoBehaviour
         Debug.Log("Level Won");
         EndGameText.text = "VICTORY!";
         gameObject.SetActive(true);
+        WinSound.Play();
     }
 
     void LoseLevel()

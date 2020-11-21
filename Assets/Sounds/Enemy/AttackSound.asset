@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cad80b68131e4cacbc0f7021d48e560, type: 3}
+  m_Name: AttackSound
+  m_EditorClassIdentifier: 
+  VolumeMin: 0.93
+  VolumeMax: 1.08
+  PitchMin: 0.88
+  PitchMax: 1.11
+  Cooldown: 2
+  Clips:
+  - {fileID: 8300000, guid: 62f8f40fd20b22b48842351c2930fbc4, type: 3}

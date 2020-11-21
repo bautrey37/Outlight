@@ -5,6 +5,8 @@ using UnityEngine;
 public class GameController : MonoBehaviour
 {
     public int Money = 0;
+    public AudioClipGroup BackgroundMusic;
+    private bool EndLevel = false;
 
     private void Awake()
     {
@@ -12,13 +14,18 @@ public class GameController : MonoBehaviour
         Events.OnRequestMoney += OnRequestMoney;
         Events.OnHealthDestroyed += OnHealthDestroyed;
         Events.SetMoney(Money);
-
+       
     }
 
     public void Start()
     {
-        
+        BackgroundMusic.Play();
     }
+    public void Update()
+    {
+      
+    }
+
 
     private void OnDestroy()
     {
