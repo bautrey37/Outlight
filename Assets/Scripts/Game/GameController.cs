@@ -5,19 +5,21 @@ using UnityEngine;
 public class GameController : MonoBehaviour
 {
     public int Money = 0;
+    public AudioClipGroup BackgroundMusic;
+
+    private bool endLevel = false;
 
     private void Awake()
     {
         Events.OnSetMoney += OnSetMoney;
         Events.OnRequestMoney += OnRequestMoney;
         Events.OnHealthDestroyed += OnHealthDestroyed;
-        Events.SetMoney(Money);
-
     }
 
     public void Start()
     {
-        
+        BackgroundMusic.PlayBackground();
+        Events.SetMoney(Money);
     }
 
     private void OnDestroy()
@@ -45,12 +47,14 @@ public class GameController : MonoBehaviour
         Camp camp = go.GetComponent<Camp>();
         Structure structure = go.GetComponent<Structure>();
 
-        if (structures.Length == 1 && structure != null)
+        if (!endLevel && structures.Length == 1 && structure != null)
         {
+            endLevel = true;
             Events.EndLevel(false);
         }
-        if (camps.Length == 1 && camp != null)
+        if (!endLevel && camps.Length == 1 && camp != null)
         {
+            endLevel = true;
             Events.EndLevel(true);
         }
     }

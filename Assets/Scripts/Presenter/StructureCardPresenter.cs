@@ -17,6 +17,12 @@ public class StructureCardPresenter : MonoBehaviour
 
     private void Awake()
     {
+        Events.OnSetMoney += OnSetMoney;
+    }
+
+    private void OnDestroy()
+    {
+        Events.OnSetMoney -= OnSetMoney;
     }
 
     private void Start()
@@ -29,7 +35,6 @@ public class StructureCardPresenter : MonoBehaviour
             IconImage.sprite = StructureData.Icon;
         }
         button.onClick.AddListener(Pressed);
-        Events.OnSetMoney += OnSetMoney;
     }
 
     private void OnSetMoney(int value)
