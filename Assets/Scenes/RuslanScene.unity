@@ -412,6 +412,7 @@ GameObject:
   m_Component:
   - component: {fileID: 256809908}
   - component: {fileID: 256809907}
+  - component: {fileID: 256809909}
   - component: {fileID: 256809906}
   - component: {fileID: 256809905}
   m_Layer: 0
@@ -500,6 +501,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &256809909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 256809904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d92b4038f9811a240af2dc87eba22481, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CamSize: 0
+  zoomDelta: 0
 --- !u!1 &262424921
 GameObject:
   m_ObjectHideFlags: 0
