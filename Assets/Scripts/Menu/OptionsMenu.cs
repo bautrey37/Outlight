@@ -5,12 +5,12 @@ using UnityEngine.UI;
 
 public class OptionsMenu : MonoBehaviour
 {
-    public Slider MusicVolume;
-    public Slider InteractionVolume;
+    public Slider BackgroundVolume;
+    public Slider EffectsVolume;
 
     private void Start()
     {
-        MusicVolume.value = GameSettings.Instance.MusicVolume;
-        InteractionVolume.value = GameSettings.Instance.InteractionVolume;
+        BackgroundVolume.value = GameSettings.Instance.BackgroundVolume;
+        EffectsVolume.value = GameSettings.Instance.EffectsVolume;
     }
 }

@@ -38,8 +38,21 @@ public class AudioClipGroup : ScriptableObject
 
         timestamp = Time.time + Cooldown;
 
-        source.volume = Random.Range(VolumeMin, VolumeMax) * GameSettings.Instance.InteractionVolume;
+        source.volume = Random.Range(VolumeMin, VolumeMax) * GameSettings.Instance.EffectsVolume;
         source.pitch = Random.Range(PitchMin, PitchMax);
+        source.clip = Clips[Random.Range(0, Clips.Count)];
+        source.Play();
+    }
+
+    public void PlayBackground()
+    {
+        if (AudioSourcePool.Instance == null) return;
+        if (Clips.Count <= 0) return;
+
+        Debug.Log(GameSettings.Instance.BackgroundVolume);
+        AudioSource source = AudioSourcePool.Instance.GetSource();
+        source.volume = GameSettings.Instance.BackgroundVolume;
+        source.pitch = 1;
         source.clip = Clips[Random.Range(0, Clips.Count)];
         source.Play();
     }

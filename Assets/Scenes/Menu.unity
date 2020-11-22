@@ -446,7 +446,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -23.4, y: 17.1}
+  m_AnchoredPosition: {x: -63.6, y: 17.1}
   m_SizeDelta: {x: -205.81906, y: -58.805424}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &167710262
@@ -469,7 +469,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: MUSIC VOLUME
+  m_text: BACKGROUND MUSIC
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -532,7 +532,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 1
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -33.38037, y: 0, z: -81.436386, w: -22.999466}
+  m_margin: {x: -33.38037, y: 0, z: -158.86147, w: -22.999466}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -558,7 +558,7 @@ GameObject:
   - component: {fileID: 200384583}
   - component: {fileID: 200384582}
   m_Layer: 0
-  m_Name: MusicVolume
+  m_Name: BackgroundVolume
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -812,7 +812,7 @@ GameObject:
   - component: {fileID: 461955018}
   - component: {fileID: 461955017}
   m_Layer: 0
-  m_Name: InteractionVolume
+  m_Name: EffectVolume
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1725,8 +1725,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63414440575be42489a8f3e054737c63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MusicVolume: {fileID: 1463112754}
-  InteractionVolume: {fileID: 1965090728}
+  BackgroundVolume: {fileID: 1463112754}
+  EffectsVolume: {fileID: 1965090728}
 --- !u!1 &1087180021
 GameObject:
   m_ObjectHideFlags: 0
@@ -2600,7 +2600,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1067184810}
         m_TargetAssemblyTypeName: GameSettings, Assembly-CSharp
-        m_MethodName: set_MusicVolume
+        m_MethodName: set_BackgroundVolume
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3291,7 +3291,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: INTERACTION VOLUME
+  m_text: SOUND EFFECTS
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3534,7 +3534,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1067184810}
         m_TargetAssemblyTypeName: GameSettings, Assembly-CSharp
-        m_MethodName: set_InteractionVolume
+        m_MethodName: set_EffectsVolume
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

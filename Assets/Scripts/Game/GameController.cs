@@ -6,7 +6,8 @@ public class GameController : MonoBehaviour
 {
     public int Money = 0;
     public AudioClipGroup BackgroundMusic;
-    //private bool EndLevel = false;
+
+    private bool endLevel = false;
 
     private void Awake()
     {
@@ -19,13 +20,8 @@ public class GameController : MonoBehaviour
 
     public void Start()
     {
-        BackgroundMusic.Play();
+        BackgroundMusic.PlayBackground();
     }
-    public void Update()
-    {
-      
-    }
-
 
     private void OnDestroy()
     {
@@ -52,12 +48,14 @@ public class GameController : MonoBehaviour
         Camp camp = go.GetComponent<Camp>();
         Structure structure = go.GetComponent<Structure>();
 
-        if (structures.Length == 1 && structure != null)
+        if (!endLevel && structures.Length == 1 && structure != null)
         {
+            endLevel = true;
             Events.EndLevel(false);
         }
-        if (camps.Length == 1 && camp != null)
+        if (!endLevel && camps.Length == 1 && camp != null)
         {
+            endLevel = true;
             Events.EndLevel(true);
         }
     }

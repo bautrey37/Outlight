@@ -6,21 +6,21 @@ public class GameSettings : MonoBehaviour
 {
     public static GameSettings Instance;
 
-    public float MusicVolume
+    public float BackgroundVolume
     {
-        get { return PlayerPrefs.GetFloat("IVolume"); }
+        get { return PlayerPrefs.GetFloat("BVolume"); }
         set
         {
-            PlayerPrefs.SetFloat("MVolume", value);
+            PlayerPrefs.SetFloat("BVolume", value);
         }
     }
 
-    public float InteractionVolume
+    public float EffectsVolume
     {
-        get { return PlayerPrefs.GetFloat("IVolume"); }
+        get { return PlayerPrefs.GetFloat("EVolume"); }
         set
         {
-            PlayerPrefs.SetFloat("IVolume", value);
+            PlayerPrefs.SetFloat("EVolume", value);
         }
     }
 
