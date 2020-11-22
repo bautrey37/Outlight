@@ -11,10 +11,13 @@ public class MinerUpgradeSkill : MonoBehaviour
     public Miner miner;
     void Start()
     {
-        miner.TimeBetweenCoin = 1f;
+        
+    }
+    public void Awake()
+    {
+        miner.TimeBetweenCoin = 3f;
         button.onClick.AddListener(Pressed);
     }
-
     void Pressed()
     {
         buttonPressed = true;

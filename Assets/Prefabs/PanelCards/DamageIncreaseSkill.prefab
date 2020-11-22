@@ -34,7 +34,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0.8, y: -62.2}
+  m_AnchoredPosition: {x: 0.0000084043, y: -2.899994}
   m_SizeDelta: {x: 32, y: 20}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!222 &8819007978513258402
@@ -74,8 +74,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -220,10 +220,11 @@ GameObject:
   - component: {fileID: 8819007980542199680}
   - component: {fileID: 8819007980542199709}
   - component: {fileID: 5030500790635267375}
+  - component: {fileID: 2420875212589528446}
   - component: {fileID: 8819007980542199682}
   - component: {fileID: 8819007980542199683}
   m_Layer: 5
-  m_Name: Skill1
+  m_Name: DamageIncreaseSkill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -238,7 +239,7 @@ RectTransform:
   m_GameObject: {fileID: 8819007980542199681}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 12.122352, y: 1.6702164, z: 2.4246638}
   m_Children:
   - {fileID: 8819007978513258400}
   - {fileID: 8819007980097016529}
@@ -274,6 +275,22 @@ MonoBehaviour:
   CostText: {fileID: 8819007978513258403}
   IconImage: {fileID: 8819007980097016528}
   button: {fileID: 8819007980542199683}
+--- !u!114 &2420875212589528446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8819007980542199681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15f8f5b7f90d03544984aceefa92feba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BulletPrefab: {fileID: 6098228261532989901, guid: 9fc798c9e140adf48bcf5d5289d2637f, type: 3}
+  skillsData: {fileID: 11400000, guid: 8a3f4e48a5ab20246955bfba67df6157, type: 2}
+  button: {fileID: 8819007980542199683}
+  tower: {fileID: 2931258402302244380, guid: 90dcf655fd118ad4a91a4d6d452f7511, type: 3}
 --- !u!114 &8819007980542199682
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -326,7 +343,7 @@ MonoBehaviour:
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_PressedColor: {r: 0.6981132, g: 0.6981132, b: 0.6981132, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
