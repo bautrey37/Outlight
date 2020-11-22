@@ -17,7 +17,7 @@ public class AudioClipGroup : ScriptableObject
 
     public List<AudioClip> Clips;
 
-    private AudioSource backgroundSource;
+    public AudioSource backgroundSource;
     private float timestamp;
 
     private void OnEnable()
@@ -56,6 +56,7 @@ public class AudioClipGroup : ScriptableObject
         backgroundSource.pitch = 1;
         backgroundSource.clip = Clips[Random.Range(0, Clips.Count)];
         backgroundSource.Play();
+        backgroundSource.loop = backgroundSource.isPlaying;
     }
 
     // TODO: put background music in a persisted state, not in teh clip file

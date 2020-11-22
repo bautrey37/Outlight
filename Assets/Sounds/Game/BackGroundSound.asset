@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: BackGroundSound
   m_EditorClassIdentifier: 
   VolumeMin: 0.93
-  VolumeMax: 1.08
+  VolumeMax: 0
   PitchMin: 0.88
   PitchMax: 1.11
   Cooldown: 0.1
   Clips:
-  - {fileID: 8300000, guid: 83b60cb4448fa4b498c332eb2c9c565c, type: 3}
+  - {fileID: 8300000, guid: 37070d6b6491e7f47b205127a470041b, type: 3}
+  backgroundSource: {fileID: 0}

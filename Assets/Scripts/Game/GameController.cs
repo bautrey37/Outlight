@@ -14,11 +14,17 @@ public class GameController : MonoBehaviour
         Events.OnSetMoney += OnSetMoney;
         Events.OnRequestMoney += OnRequestMoney;
         Events.OnHealthDestroyed += OnHealthDestroyed;
+        BackgroundMusic.PlayBackground();
     }
-
+    public void Update()
+    {
+        if (endLevel == true)
+        {
+            BackgroundMusic.StopBackground();
+        }
+    }
     public void Start()
     {
-        BackgroundMusic.PlayBackground();
         Events.SetMoney(Money);
     }
 
