@@ -41,6 +41,7 @@ public class EndPanelPresenter : MonoBehaviour
     {
         EndGameText.text = "VICTORY!";
         gameObject.SetActive(true);
+        WinSound.StopBackground();
         WinSound.Play();
     }
 
@@ -48,6 +49,7 @@ public class EndPanelPresenter : MonoBehaviour
     {
         EndGameText.text = "LOST!";
         gameObject.SetActive(true);
+        WinSound.StopBackground();
         //LoseSound.Play();
     }
 

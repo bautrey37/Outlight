@@ -979,7 +979,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1720579782
 GameObject:
@@ -3793,7 +3793,7 @@ Transform:
   - {fileID: 700453891}
   - {fileID: 1904844087}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1910267221775372767
 PrefabInstance:
@@ -4015,6 +4015,10 @@ PrefabInstance:
     - target: {fileID: 5008081127199396234, guid: cc82c2fbf0b864aa19334070b7ee4e5f, type: 3}
       propertyPath: m_Name
       value: GameManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 5008081127199396239, guid: cc82c2fbf0b864aa19334070b7ee4e5f, type: 3}
+      propertyPath: Money
+      value: 1000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc82c2fbf0b864aa19334070b7ee4e5f, type: 3}

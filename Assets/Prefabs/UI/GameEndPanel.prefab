@@ -228,7 +228,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EndGameText: {fileID: 1910267220706215729}
   EndGameButton: {fileID: 1910267221023098408}
-  WinSound: {fileID: 0}
+  WinSound: {fileID: 11400000, guid: 7a3dc9e220cb9a24db4bebecbd1636f1, type: 2}
 --- !u!1 &1910267221023098410
 GameObject:
   m_ObjectHideFlags: 0
