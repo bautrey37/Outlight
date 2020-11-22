@@ -26,7 +26,7 @@ public class SkillDamageIncrease : MonoBehaviour
 
         if (button.interactable && Input.GetKeyDown((KeyCode)Enum.Parse(typeof(KeyCode), skillsData.Shortcut)) || buttonPressed)
         {
-            BulletPrefab.Damage += 1;
+            BulletPrefab.Damage += 10;
             Debug.Log("Damage" + BulletPrefab.Damage);
             buttonPressed = false;
         }
