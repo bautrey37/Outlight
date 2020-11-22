@@ -10,6 +10,7 @@ public class SkillDamageIncrease : MonoBehaviour
     public SkillsData skillsData;
     public Button button;
     private bool buttonPressed = false;
+    public Tower tower;
     void Start()
     {
         BulletPrefab.Damage = 1;
