@@ -5,10 +5,10 @@ using UnityEngine;
 public class CameraZoom : MonoBehaviour
 {
     private Camera Cam;
-    public float CamSize;
-    public float zoomDelta;
-    float minZoom = 2f;
-    float maxZoom = 10f;
+    float CamSize;
+    float zoomDelta;
+    public float minZoom = 2f;
+    public float maxZoom = 10f;
     void Start()
     {
         
@@ -23,7 +23,7 @@ public class CameraZoom : MonoBehaviour
     void Update()
     {
         // get the current size + the scrollwheel change
-        zoomDelta = CamSize + Input.mouseScrollDelta.y;
+        zoomDelta = CamSize - Input.mouseScrollDelta.y;
         // constrain zoom
         CamSize = Mathf.Clamp(zoomDelta, minZoom, maxZoom);
         // apply zoom to field of view
