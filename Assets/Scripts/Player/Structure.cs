@@ -11,13 +11,13 @@ public class Structure : MonoBehaviour
     private void Awake()
     {
         HealthComponent = gameObject.GetComponent<Health>();
+        if (HealthComponent != null)
+        {
+            HealthComponent.MaxHealth = structure.Health;
+        }
     }
 
     private void Start()
     {
-        if (HealthComponent != null)
-        {
-
-        }
     }
 }

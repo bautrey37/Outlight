@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Orc
   Health: 3
-  AttackStrength: 1
+  AttackStrength: 5
   AttackSpeed: 0.3
   Speed: 1
   EnemyPrefab: {fileID: -1703497024498414192, guid: 09586fe188718df4f94dd29a764fab9b, type: 3}

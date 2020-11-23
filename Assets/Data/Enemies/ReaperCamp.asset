@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 676b052793ae04276938dd293c6b13a4, type: 3}
-  m_Name: GolemCamp
+  m_Name: ReaperCamp
   m_EditorClassIdentifier: 
   Name: Golem Camp
   Health: 40
-  MaxSpawnedEnemies: 1
-  SpawnFrequency: 1
-  CampPrefab: {fileID: 476819216285811338, guid: 6c810d5d35abea242bcf4d4980173b9b, type: 3}
+  MaxSpawnedEnemies: 3
+  SpawnFrequency: 3
+  CampPrefab: {fileID: 476819216285811338, guid: eb217369f6e9111478116900d524138d, type: 3}

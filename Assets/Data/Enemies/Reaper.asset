@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Reaper
   m_EditorClassIdentifier: 
   Name: Reaper
-  Health: 5
-  AttackStrength: 1
-  AttackSpeed: 4
-  Speed: 1
+  Health: 2
+  AttackStrength: 2
+  AttackSpeed: 0.2
+  Speed: 1.2
   EnemyPrefab: {fileID: 7707014898275262275, guid: 2d936ca8cfcf8d64ba06f3d8bd183c30, type: 3}
   Moving: {fileID: 11400000, guid: afe4318aa114c0e46ac4375e275a6aad, type: 2}
   Attack: {fileID: 11400000, guid: cb3d189d0ea9c154f8c8aee690e7c6b6, type: 2}

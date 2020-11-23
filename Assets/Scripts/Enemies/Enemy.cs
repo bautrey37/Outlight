@@ -47,7 +47,6 @@ public class Enemy : MonoBehaviour
                 anim.SetBool("Walk", false);
                 if (nextAttack < Time.time)
                 {
-                    anim.SetBool("Attack", true);
                     Attack();
                 }
             } else
@@ -55,7 +54,6 @@ public class Enemy : MonoBehaviour
                 float step = movementSpeed * Time.deltaTime; // calculate distance to move
                 transform.position = Vector2.MoveTowards(transform.position, target.position, step);
                 EnemyData.Moving.Play();
-                anim.SetBool("Attack", false);
                 anim.SetBool("Walk", true);
             }
         }
@@ -92,6 +90,7 @@ public class Enemy : MonoBehaviour
     void Attack()
     {
         //Debug.Log("Attack Target");
+        anim.SetTrigger("Attack");
         Health targetHealth = target.GetComponent<Health>();
         if (targetHealth != null) targetHealth.Damage(attackStrength);
         nextAttack = Time.time + attackSpeed;
