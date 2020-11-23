@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 3848638487557544346}
   - component: {fileID: 3279363426972766719}
   m_Layer: 0
-  m_Name: Camp
+  m_Name: OrcCamp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -113,6 +113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e70f96577dcb4a4fa30d6c087cc086f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthBarPrefab: {fileID: 2604881914663022590, guid: 07766d08f0659cf4485f529f0068add9, type: 3}
 --- !u!114 &476819216285811338
 MonoBehaviour:
   m_ObjectHideFlags: 0
