@@ -6,7 +6,7 @@ public class MainMenu : MonoBehaviour
 {
     public void PlayGame()
     {
-        SceneManager.LoadScene("BrandonScene");
+        SceneManager.LoadScene("MirasTestScene");
     }
 
     public void QuitGame()
