@@ -6,23 +6,19 @@ using UnityEngine;
 public class Health : MonoBehaviour
 {
     internal int MaxHealth = 5;
+    Animator anim;
     public int CurrentHealth
     {
         get => currentHealth;
-        set
-        {
-            if (value <= 0)
-            {
-                Kill();
-            }
-            else
-            {
-                currentHealth = value;
-            }
-        }
+        set { if (value <= 0) { Kill(); } else { currentHealth = value; } }
     }
 
     private int currentHealth;
+
+    private void Awake()
+    {
+        anim = GetComponent<Animator>();
+    }
 
     private void Start()
     {
@@ -37,6 +33,10 @@ public class Health : MonoBehaviour
     private void Kill()
     {
         Events.HealthDestroyed(gameObject);
+        if (anim != null)
+        {
+            anim.SetTrigger("Death");
+        }
         Destroy(gameObject);
     }
 }

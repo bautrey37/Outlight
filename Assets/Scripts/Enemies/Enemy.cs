@@ -14,6 +14,7 @@ public class Enemy : MonoBehaviour
     private float attackDistance = 0.5f;
     private float nextAttack = 0f;
     private SpriteRenderer spriteRenderer;
+    private Spriter2UnityDX.EntityRenderer entityRenderer;
 
     private Animator anim;
     private void Awake()
@@ -25,6 +26,7 @@ public class Enemy : MonoBehaviour
         attackSpeed = EnemyData.AttackSpeed;
         GetComponent<Health>().MaxHealth = EnemyData.Health;
         spriteRenderer = GetComponent<SpriteRenderer>();
+        entityRenderer = GetComponent<Spriter2UnityDX.EntityRenderer>();
     }
 
     void Start()
@@ -36,13 +38,16 @@ public class Enemy : MonoBehaviour
         FindClosestTarget();
         if (target != null)
         {
-            if (target.position.x < transform.position.x) spriteRenderer.flipX = true;
+            Vector3 scale = transform.localScale;
+            scale.x = Mathf.Sign(target.position.x - transform.position.x) * Mathf.Abs(scale.x);
+            transform.localScale = scale;
 
             if (Vector3.Distance(transform.position, target.position) < attackDistance)
             {
                 anim.SetBool("Walk", false);
                 if (nextAttack < Time.time)
                 {
+                    anim.SetBool("Attack", true);
                     Attack();
                 }
             } else
@@ -50,6 +55,7 @@ public class Enemy : MonoBehaviour
                 float step = movementSpeed * Time.deltaTime; // calculate distance to move
                 transform.position = Vector2.MoveTowards(transform.position, target.position, step);
                 EnemyData.Moving.Play();
+                anim.SetBool("Attack", false);
                 anim.SetBool("Walk", true);
             }
         }
@@ -86,7 +92,6 @@ public class Enemy : MonoBehaviour
     void Attack()
     {
         //Debug.Log("Attack Target");
-        anim.SetBool("Attack", true);
         Health targetHealth = target.GetComponent<Health>();
         if (targetHealth != null) targetHealth.Damage(attackStrength);
         nextAttack = Time.time + attackSpeed;
