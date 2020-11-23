@@ -117,7 +117,8 @@ public class StructureBuilder : MonoBehaviour
 
         Events.RemoveMoney(currentStructureData.Cost);
 
-        Instantiate(currentStructureData.StructurePrefab, transform.position, Quaternion.identity, null);
+        Structure structure = Instantiate(currentStructureData.StructurePrefab, transform.position, Quaternion.identity, null);
+        structure.setStructureData(currentStructureData);
         gameObject.SetActive(false);
         currentStructureData.BuildSound.Play();
     }

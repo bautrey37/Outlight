@@ -7,6 +7,7 @@ public class StructureData : ScriptableObject
 {
     public string Name;
     public int Cost;
+    public int MaintenanceCost;
     public int Health;
     public string Shortcut;
     public Sprite Icon;
