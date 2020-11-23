@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Golem
   m_EditorClassIdentifier: 
   Name: Golem
-  Health: 50
+  Health: 10
   AttackStrength: 15
   AttackSpeed: 5
   Speed: 0.5

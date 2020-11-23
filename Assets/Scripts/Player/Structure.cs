@@ -15,7 +15,7 @@ public class Structure : MonoBehaviour
         HealthComponent = gameObject.GetComponent<Health>();
         if (HealthComponent != null)
         {
-            HealthComponent.MaxHealth = structure.Health;
+            HealthComponent.InitMaxHealth(structure.Health);
         }
     }
 
@@ -28,6 +28,10 @@ public class Structure : MonoBehaviour
         if (Time.time >= NextMaintenanceTime && structure != null)
         {
             NextMaintenanceTime = Time.time + TimeBetweenMaintenance;
+            if (Events.RequestMoney() < structure.MaintenanceCost && structure.MaintenanceCost > 0)
+            {
+                Destroy(gameObject);
+            }
             Events.RemoveMoney(structure.MaintenanceCost);
         }
         

@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Light
   m_EditorClassIdentifier: 
   Name: Light Source
-  Cost: 15
+  Cost: 10
+  MaintenanceCost: 0
   Health: 50
   Shortcut: Alpha1
   Icon: {fileID: -6281510828644196786, guid: 92879008d1414441bb045e2ba2cb9c33, type: 3}

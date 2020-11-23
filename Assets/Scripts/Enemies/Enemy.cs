@@ -24,7 +24,7 @@ public class Enemy : MonoBehaviour
         movementSpeed = EnemyData.Speed;
         attackStrength = EnemyData.AttackStrength;
         attackSpeed = EnemyData.AttackSpeed;
-        GetComponent<Health>().MaxHealth = EnemyData.Health;
+        GetComponent<Health>().InitMaxHealth(EnemyData.Health);
         spriteRenderer = GetComponent<SpriteRenderer>();
         entityRenderer = GetComponent<Spriter2UnityDX.EntityRenderer>();
     }

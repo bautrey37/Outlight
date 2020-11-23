@@ -18,7 +18,7 @@ public class Spawn : MonoBehaviour
         nextSpawnTime = Time.time;
         timeBetweenSpawn = CampData.SpawnFrequency;
         maxEnemies = CampData.MaxSpawnedEnemies;
-        GetComponent<Health>().MaxHealth = CampData.Health;
+        GetComponent<Health>().InitMaxHealth(CampData.Health);
     }
 
     private void Start()
@@ -51,7 +51,7 @@ public class Spawn : MonoBehaviour
     {
         nextSpawnTime = Time.time + timeBetweenSpawn;
 
-        Enemy enemy = GameObject.Instantiate(EnemyData.EnemyPrefab, transform.position, Quaternion.identity, null);
+        Enemy enemy = Instantiate(EnemyData.EnemyPrefab, transform.position, Quaternion.identity, null);
         return enemy;
     }
 }
