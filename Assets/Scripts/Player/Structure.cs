@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Structure : MonoBehaviour
 {
-    private StructureData structure;
+    public StructureData structure;
     private float TimeBetweenMaintenance = 1f;
     private float NextMaintenanceTime = 0;
 

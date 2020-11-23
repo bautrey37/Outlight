@@ -17,6 +17,6 @@ MonoBehaviour:
   AttackStrength: 15
   AttackSpeed: 5
   Speed: 0.5
-  EnemyPrefab: {fileID: 3776052763486865760, guid: 6d0265f627f732c4e8c257e2f4bd0ca0, type: 3}
+  EnemyPrefab: {fileID: 918040249, guid: 8db8069ae0754674c8438b689402a2a9, type: 3}
   Moving: {fileID: 11400000, guid: afe4318aa114c0e46ac4375e275a6aad, type: 2}
   Attack: {fileID: 11400000, guid: cb3d189d0ea9c154f8c8aee690e7c6b6, type: 2}

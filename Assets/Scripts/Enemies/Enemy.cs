@@ -19,7 +19,7 @@ public class Enemy : MonoBehaviour
     private Animator anim;
     private void Awake()
     {
-        anim = GetComponent<Animator>();
+        anim = GetComponentInChildren<Animator>();
         TargetsInRange = new List<Transform>();
         movementSpeed = EnemyData.Speed;
         attackStrength = EnemyData.AttackStrength;
