@@ -2238,6 +2238,14 @@ PrefabInstance:
       propertyPath: m_text
       value: EXIT
       objectReference: {fileID: 0}
+    - target: {fileID: 7122697200843474081, guid: 60915800506984b13b33bf70fdc566a4, type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7122697200843474081, guid: 60915800506984b13b33bf70fdc566a4, type: 3}
+      propertyPath: m_fontSize
+      value: 30.2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60915800506984b13b33bf70fdc566a4, type: 3}
 --- !u!1001 &1258130249
@@ -3307,6 +3315,14 @@ PrefabInstance:
       propertyPath: m_text
       value: OPTIONS
       objectReference: {fileID: 0}
+    - target: {fileID: 7122697200843474081, guid: 60915800506984b13b33bf70fdc566a4, type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7122697200843474081, guid: 60915800506984b13b33bf70fdc566a4, type: 3}
+      propertyPath: m_fontSize
+      value: 30.2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60915800506984b13b33bf70fdc566a4, type: 3}
 --- !u!1 &1795288250
@@ -3806,6 +3822,14 @@ PrefabInstance:
       propertyPath: m_text
       value: LEVELS
       objectReference: {fileID: 0}
+    - target: {fileID: 7122697200843474081, guid: 60915800506984b13b33bf70fdc566a4, type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7122697200843474081, guid: 60915800506984b13b33bf70fdc566a4, type: 3}
+      propertyPath: m_fontSize
+      value: 30.2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60915800506984b13b33bf70fdc566a4, type: 3}
 --- !u!1 &2012903060
@@ -4165,6 +4189,14 @@ PrefabInstance:
     - target: {fileID: 7122697199845380659, guid: 60915800506984b13b33bf70fdc566a4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 7122697200843474081, guid: 60915800506984b13b33bf70fdc566a4, type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7122697200843474081, guid: 60915800506984b13b33bf70fdc566a4, type: 3}
+      propertyPath: m_fontSize
+      value: 30.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60915800506984b13b33bf70fdc566a4, type: 3}
