@@ -3793,7 +3793,7 @@ Transform:
   - {fileID: 700453891}
   - {fileID: 1904844087}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1910267221775372767
 PrefabInstance:
@@ -4018,7 +4018,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5008081127199396239, guid: cc82c2fbf0b864aa19334070b7ee4e5f, type: 3}
       propertyPath: Money
-      value: 1000
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc82c2fbf0b864aa19334070b7ee4e5f, type: 3}
