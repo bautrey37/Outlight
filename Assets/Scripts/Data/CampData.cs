@@ -5,9 +5,15 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Game/CampData")]
 public class CampData : ScriptableObject
 {
-    public string Name;
-    public int Health;
-    public int MaxSpawnedEnemies;
-    public float SpawnFrequency;
     public Camp CampPrefab;
+    [Space]
+
+    public string Name;
+    [Range(1,30)]
+    public int Health;
+    [Range(1, 3)]
+    public int MaxSpawnedEnemies;
+    [Tooltip("In seconds")]
+    [Range(0,5)]
+    public float SpawnFrequency;
 }

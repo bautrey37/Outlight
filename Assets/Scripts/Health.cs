@@ -5,12 +5,12 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    public int MaxHealth;
     Animator anim;
     public HealthBar healthBarPrefab;
     public HealthBar hbinst;
 
-    public int currentHealth;
+    private int maxHealth;
+    private int currentHealth;
     public int CurrentHealth
     {
         get => currentHealth;
@@ -37,9 +37,9 @@ public class Health : MonoBehaviour
     public void InitMaxHealth(int val)
     {
         InitHB();
-        MaxHealth = val;
-        CurrentHealth = MaxHealth;
-        hbinst.SetMaxHealth(MaxHealth);
+        maxHealth = val;
+        CurrentHealth = maxHealth;
+        hbinst.SetMaxHealth(maxHealth);
     }
 
     internal void Damage(int damage)

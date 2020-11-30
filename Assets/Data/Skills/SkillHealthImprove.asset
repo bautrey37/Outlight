@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcefab087cefd4749a5963ea8054372f, type: 3}
   m_Name: SkillHealthImprove
   m_EditorClassIdentifier: 
+  SkillPrefab: {fileID: 1811239014329668793, guid: d957d90010d686e498a58239589ce4f9, type: 3}
   Name: SkillHealthImprove
   Cost: 5
   Shortcut: Alpha5
   Icon: {fileID: 6961353361489430791, guid: 1aad5ca1aede74e9fba2eb8bff4215b1, type: 3}
-  SkillPrefab: {fileID: 1811239014329668793, guid: d957d90010d686e498a58239589ce4f9, type: 3}
