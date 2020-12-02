@@ -3,9 +3,6 @@ using UnityEngine;
 
 public class MyWindow : EditorWindow
 {
-    string myString = "Hello World";
-    bool groupEnabled;
-    bool myBool = true;
     float myFloat = 1f;
 
     // Add menu item named "My Window" to the Window menu
@@ -13,7 +10,8 @@ public class MyWindow : EditorWindow
     public static void ShowWindow()
     {
         //Show existing window instance. If one doesn't exist, make one.
-        EditorWindow.GetWindow(typeof(MyWindow));
+        
+        EditorWindow.GetWindow(typeof(MyWindow), false, "God Mode");
     }
 
     void OnGUI()
