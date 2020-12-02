@@ -37,7 +37,7 @@ public class MyWindow : EditorWindow
         }
         GUILayout.Space(5);
 
-        myFloat = EditorGUILayout.Slider("Slider", myFloat, 0, 2);
+        myFloat = EditorGUILayout.Slider("Time speed", myFloat, 0, 2);
         Time.timeScale = myFloat;
     }
 }
