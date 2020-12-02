@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 81794cbdcc3ae3d4da8f2e13201ea595, type: 3}
-  m_Name: Light
+  m_Name: Tower
   m_EditorClassIdentifier: 
-  Name: Light Source
-  Cost: 10
-  MaintenanceCost: 0
-  Health: 50
-  Shortcut: Alpha1
-  Icon: {fileID: -6281510828644196786, guid: 92879008d1414441bb045e2ba2cb9c33, type: 3}
-  StructurePrefab: {fileID: 6472407557076444909, guid: e3e1dd4c8be7c0642a11ab9fd704f29d, type: 3}
-  BuildSound: {fileID: 11400000, guid: 6f00e6a4903eb9144a2c16f751717dc3, type: 2}
+  StructurePrefab: {fileID: 865537652, guid: 90dcf655fd118ad4a91a4d6d452f7511, type: 3}
+  Name: Tower
+  Cost: 15
+  MaintenanceCost: 1
+  Health: 40
+  Shortcut: Alpha2
+  Icon: {fileID: 21300000, guid: bce65870415b4dc40bfa4d6dc2fe954b, type: 3}
+  BuildSound: {fileID: 11400000, guid: ff4382786043a964da66ded76f08a8ee, type: 2}

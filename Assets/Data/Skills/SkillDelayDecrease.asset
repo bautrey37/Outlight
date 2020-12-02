@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bcefab087cefd4749a5963ea8054372f, type: 3}
-  m_Name: Skill
+  m_Name: SkillDelayDecrease
   m_EditorClassIdentifier: 
-  Name: Skill
+  SkillPrefab: {fileID: 1811239014329668793, guid: d957d90010d686e498a58239589ce4f9, type: 3}
+  Name: SkillHealthImprove
   Cost: 5
-  Shortcut: Alpha3
-  Icon: {fileID: 21300000, guid: 5b1819d305126754f9515c5d98c91862, type: 3}
-  SkillPrefab: {fileID: 7882521902348519554, guid: 8fe6efc4469e61f40b354b0db5002ca8, type: 3}
+  Shortcut: Alpha4
+  Icon: {fileID: 21300000, guid: 255c5c9d1ec3443409c6717f4b3d0b4f, type: 3}

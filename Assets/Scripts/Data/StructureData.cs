@@ -5,13 +5,25 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Game/StructureData")]
 public class StructureData : ScriptableObject
 {
+    public Structure StructurePrefab;
+
+    [Header("Attributes")]
+    [Space]
     public string Name;
+    [Range(0,50)]
     public int Cost;
+    [Range(0,5)]
     public int MaintenanceCost;
+    [Range(0,100)]
     public int Health;
+
+    [Header("GUI Panel Attributes")]
+    [Space]
     public string Shortcut;
     public Sprite Icon;
-    public Structure StructurePrefab;
+
+    [Header("Audio")]
+    [Space]
     public AudioClipGroup BuildSound;
 
 }
