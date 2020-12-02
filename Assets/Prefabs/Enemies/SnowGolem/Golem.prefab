@@ -1002,6 +1002,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBarPrefab: {fileID: 0}
+  hbinst: {fileID: 0}
 --- !u!114 &3776052763486865760
 MonoBehaviour:
   m_ObjectHideFlags: 0

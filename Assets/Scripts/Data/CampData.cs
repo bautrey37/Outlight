@@ -6,8 +6,9 @@ using UnityEngine;
 public class CampData : ScriptableObject
 {
     public Camp CampPrefab;
-    [Space]
 
+    [Header("Attributes")]
+    [Space]
     public string Name;
     [Range(1,30)]
     public int Health;
