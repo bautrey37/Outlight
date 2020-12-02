@@ -4,6 +4,8 @@ using System.Linq;
 using UnityEngine.EventSystems;
 using System.Collections.Generic;
 
+[RequireComponent(typeof(Structure))]
+
 public class Tower : MonoBehaviour
 {
 

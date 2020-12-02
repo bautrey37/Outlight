@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Health))]
+
 public class Structure : MonoBehaviour
 {
     public StructureData structure;

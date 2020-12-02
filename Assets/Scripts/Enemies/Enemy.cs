@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Animator))]
+[RequireComponent(typeof(SpriteRenderer))]
+[RequireComponent(typeof(Spriter2UnityDX.EntityRenderer))]
+
 public class Enemy : MonoBehaviour
 {
     public EnemyData EnemyData;
