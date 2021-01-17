@@ -20,7 +20,7 @@ public class Resource : MonoBehaviour
             foreach(RaycastHit2D hit in hits)
             {
                 // This is spamming the console
-                //Debug.Log(hit.collider.name);
+                Debug.Log(hit.collider.name);
             }
 
             if (hits.Any((RaycastHit2D hit) => (hit.collider.gameObject == gameObject)) &&
