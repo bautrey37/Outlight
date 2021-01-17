@@ -17,14 +17,15 @@ public class Resource : MonoBehaviour
             Vector2 mousePos2D = new Vector2(mousePos.x, mousePos.y);
 
             RaycastHit2D[] hits = Physics2D.RaycastAll(mousePos2D, Vector2.zero);
-            foreach(RaycastHit2D hit in hits)
-            {
-                // This is spamming the console
-                Debug.Log(hit.collider.name);
-            }
 
-            if (hits.Any((RaycastHit2D hit) => (hit.collider.gameObject == gameObject)) &&
-                hits.Any((RaycastHit2D hit) => (hit.collider.gameObject.GetComponent<LightSourceBehavior>() != null)))
+            // This is spamming the console
+            //foreach (RaycastHit2D hit in hits)
+            //{
+            //    Debug.Log(hit.collider.name);
+            //}
+
+            if (hits.Any((RaycastHit2D hit) => hit.collider.gameObject == gameObject) &&
+                hits.Any((RaycastHit2D hit) => hit.collider.gameObject.GetComponent<LightSourceBehavior>() != null))
             {
                 onClick();
             }

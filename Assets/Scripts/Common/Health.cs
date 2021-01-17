@@ -28,9 +28,9 @@ public class Health : MonoBehaviour
     {
         if (hbinst == null)
         {
-        Vector3 hbpos = transform.position;
-        hbpos.y += 1.3f;
-        hbinst = Instantiate(healthBarPrefab, hbpos, Quaternion.identity, transform);
+            Vector3 hbpos = transform.position;
+            hbpos.y += 1.3f;
+            hbinst = Instantiate(healthBarPrefab, hbpos, Quaternion.identity, transform);
         }
     }
 
