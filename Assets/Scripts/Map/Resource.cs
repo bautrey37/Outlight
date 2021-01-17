@@ -19,7 +19,8 @@ public class Resource : MonoBehaviour
             RaycastHit2D[] hits = Physics2D.RaycastAll(mousePos2D, Vector2.zero);
             foreach(RaycastHit2D hit in hits)
             {
-                Debug.Log(hit.collider.name);
+                // This is spamming the console
+                //Debug.Log(hit.collider.name);
             }
 
             if (hits.Any((RaycastHit2D hit) => (hit.collider.gameObject == gameObject)) &&
@@ -32,7 +33,7 @@ public class Resource : MonoBehaviour
 
     private void onClick()
     {
-        Debug.Log("Gathered" + res.Income);
+        //Debug.Log("Gathered" + res.Income);
         CoinDropAudio.Play();
         Events.AddMoney(res.Income);
         Destroy(gameObject);

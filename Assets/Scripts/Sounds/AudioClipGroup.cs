@@ -50,7 +50,6 @@ public class AudioClipGroup : ScriptableObject
         if (AudioSourcePool.Instance == null) return;
         if (Clips.Count <= 0) return;
 
-        Debug.Log(GameSettings.Instance.BackgroundVolume);
         backgroundSource = AudioSourcePool.Instance.GetSource();
         backgroundSource.volume = GameSettings.Instance.BackgroundVolume;
         backgroundSource.pitch = 1;
