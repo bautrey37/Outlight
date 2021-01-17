@@ -1040,7 +1040,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7122697199845380653, guid: 60915800506984b13b33bf70fdc566a4, type: 3}
       propertyPath: m_Name
-      value: RuslanLevel
+      value: ThirdLevel
       objectReference: {fileID: 0}
     - target: {fileID: 7122697199845380658, guid: 60915800506984b13b33bf70fdc566a4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1088,19 +1088,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7122697199845380658, guid: 60915800506984b13b33bf70fdc566a4, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 141.5
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 7122697199845380658, guid: 60915800506984b13b33bf70fdc566a4, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -186.75002
+      value: -137
       objectReference: {fileID: 0}
     - target: {fileID: 7122697199845380658, guid: 60915800506984b13b33bf70fdc566a4, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 263
+      value: 280
       objectReference: {fileID: 0}
     - target: {fileID: 7122697199845380658, guid: 60915800506984b13b33bf70fdc566a4, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 34.833336
+      value: 32
       objectReference: {fileID: 0}
     - target: {fileID: 7122697199845380658, guid: 60915800506984b13b33bf70fdc566a4, type: 3}
       propertyPath: m_AnchorMin.x
@@ -1188,11 +1188,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7122697199845380659, guid: 60915800506984b13b33bf70fdc566a4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: RuslanScene
+      value: Level3
       objectReference: {fileID: 0}
     - target: {fileID: 7122697200843474081, guid: 60915800506984b13b33bf70fdc566a4, type: 3}
       propertyPath: m_text
-      value: Ruslan
+      value: Level 3
       objectReference: {fileID: 0}
     - target: {fileID: 7122697200843474081, guid: 60915800506984b13b33bf70fdc566a4, type: 3}
       propertyPath: m_fontSize
@@ -1266,19 +1266,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7122697199845380658, guid: 60915800506984b13b33bf70fdc566a4, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 141.5
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 7122697199845380658, guid: 60915800506984b13b33bf70fdc566a4, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -226.58336
+      value: -174
       objectReference: {fileID: 0}
     - target: {fileID: 7122697199845380658, guid: 60915800506984b13b33bf70fdc566a4, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 263
+      value: 280
       objectReference: {fileID: 0}
     - target: {fileID: 7122697199845380658, guid: 60915800506984b13b33bf70fdc566a4, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 34.833336
+      value: 32
       objectReference: {fileID: 0}
     - target: {fileID: 7122697199845380658, guid: 60915800506984b13b33bf70fdc566a4, type: 3}
       propertyPath: m_AnchorMin.x
@@ -2309,19 +2309,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7122697199845380658, guid: 60915800506984b13b33bf70fdc566a4, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 141.5
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 7122697199845380658, guid: 60915800506984b13b33bf70fdc566a4, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -27.416626
+      value: -26
       objectReference: {fileID: 0}
     - target: {fileID: 7122697199845380658, guid: 60915800506984b13b33bf70fdc566a4, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 263
+      value: 280
       objectReference: {fileID: 0}
     - target: {fileID: 7122697199845380658, guid: 60915800506984b13b33bf70fdc566a4, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 34.833336
+      value: 32
       objectReference: {fileID: 0}
     - target: {fileID: 7122697199845380658, guid: 60915800506984b13b33bf70fdc566a4, type: 3}
       propertyPath: m_AnchorMin.x
@@ -2701,7 +2701,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7122697199845380653, guid: 60915800506984b13b33bf70fdc566a4, type: 3}
       propertyPath: m_Name
-      value: MirasLevel
+      value: FirstLevel
       objectReference: {fileID: 0}
     - target: {fileID: 7122697199845380658, guid: 60915800506984b13b33bf70fdc566a4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2749,19 +2749,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7122697199845380658, guid: 60915800506984b13b33bf70fdc566a4, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 141.5
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 7122697199845380658, guid: 60915800506984b13b33bf70fdc566a4, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -107.08334
+      value: -63
       objectReference: {fileID: 0}
     - target: {fileID: 7122697199845380658, guid: 60915800506984b13b33bf70fdc566a4, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 263
+      value: 280
       objectReference: {fileID: 0}
     - target: {fileID: 7122697199845380658, guid: 60915800506984b13b33bf70fdc566a4, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 34.833336
+      value: 32
       objectReference: {fileID: 0}
     - target: {fileID: 7122697199845380658, guid: 60915800506984b13b33bf70fdc566a4, type: 3}
       propertyPath: m_AnchorMin.x
@@ -2849,11 +2849,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7122697199845380659, guid: 60915800506984b13b33bf70fdc566a4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: MirasTestScene
+      value: Level1
       objectReference: {fileID: 0}
     - target: {fileID: 7122697200843474081, guid: 60915800506984b13b33bf70fdc566a4, type: 3}
       propertyPath: m_text
-      value: Miras
+      value: Level 1
       objectReference: {fileID: 0}
     - target: {fileID: 7122697200843474081, guid: 60915800506984b13b33bf70fdc566a4, type: 3}
       propertyPath: m_fontSize
@@ -2991,7 +2991,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7122697199845380653, guid: 60915800506984b13b33bf70fdc566a4, type: 3}
       propertyPath: m_Name
-      value: BrandonLevel
+      value: SecondLevel
       objectReference: {fileID: 0}
     - target: {fileID: 7122697199845380658, guid: 60915800506984b13b33bf70fdc566a4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3039,19 +3039,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7122697199845380658, guid: 60915800506984b13b33bf70fdc566a4, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 141.5
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 7122697199845380658, guid: 60915800506984b13b33bf70fdc566a4, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -146.91667
+      value: -100
       objectReference: {fileID: 0}
     - target: {fileID: 7122697199845380658, guid: 60915800506984b13b33bf70fdc566a4, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 263
+      value: 280
       objectReference: {fileID: 0}
     - target: {fileID: 7122697199845380658, guid: 60915800506984b13b33bf70fdc566a4, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 34.833336
+      value: 32
       objectReference: {fileID: 0}
     - target: {fileID: 7122697199845380658, guid: 60915800506984b13b33bf70fdc566a4, type: 3}
       propertyPath: m_AnchorMin.x
@@ -3135,11 +3135,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7122697199845380659, guid: 60915800506984b13b33bf70fdc566a4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: BrandonScene
+      value: Level2
       objectReference: {fileID: 0}
     - target: {fileID: 7122697200843474081, guid: 60915800506984b13b33bf70fdc566a4, type: 3}
       propertyPath: m_text
-      value: Brandon
+      value: 'Level 2
+
+'
       objectReference: {fileID: 0}
     - target: {fileID: 7122697200843474081, guid: 60915800506984b13b33bf70fdc566a4, type: 3}
       propertyPath: m_fontSize
