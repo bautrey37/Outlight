@@ -30,7 +30,10 @@ public class StructureBuilder : MonoBehaviour
         {
             Destroy(transform.GetChild(i).gameObject);
         }
+
         Structure shadow = Instantiate(obj.StructurePrefab, transform.position, Quaternion.identity, transform);
+
+        // destroy components not needed for the shadow
         foreach (var comp in shadow.GetComponents<Component>())
         {
             if (!(comp is Transform) && !(comp is Renderer))

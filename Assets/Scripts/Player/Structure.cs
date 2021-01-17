@@ -39,6 +39,11 @@ public class Structure : MonoBehaviour
         
     }
 
+    private void OnDestroy()
+    {
+        Destroy(HealthComponent);
+    }
+
     public void setStructureData(StructureData data)
     {
         structure = data;
