@@ -9,16 +9,19 @@ public class CameraZoom : MonoBehaviour
     float zoomDelta;
     public float minZoom = 2f;
     public float maxZoom = 10f;
+
     void Start()
     {
         
     }
+
     void Awake()
     {
         // find camera and starting size
         Cam = Camera.main;
         CamSize = Cam.orthographicSize;
     }
+
     // Update is called once per frame
     void Update()
     {

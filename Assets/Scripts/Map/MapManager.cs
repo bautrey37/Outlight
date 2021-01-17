@@ -7,7 +7,6 @@ public class MapManager : MonoBehaviour
 {
     public Tilemap DarkMap;
     public Tilemap BackgroundMap;
-
     public Tile DarkTile;
 
     void Start()
