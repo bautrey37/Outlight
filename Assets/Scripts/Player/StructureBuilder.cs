@@ -3,19 +3,25 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.UIElements;
 
 public class StructureBuilder : MonoBehaviour
 {
     public Color AllowColor;
     public Color BlockColor;
+    public GameObject GameManager;
 
     private StructureData currentStructureData;
+    private Bounds mapBounds;
 
     private void Awake()
     {
         Events.OnStructureSelected += OnStructureSelected;
         gameObject.SetActive(false);
+    }
+
+    private void Start()
+    {
+        mapBounds = GameManager.GetComponent<MapManager>().BackgroundMap.localBounds;
     }
 
     private void OnDestroy()
@@ -96,7 +102,15 @@ public class StructureBuilder : MonoBehaviour
     bool isFree(Vector3 pos)
     {
         Collider2D[] overlaps = Physics2D.OverlapCircleAll(pos, 0.2f);
-        bool IsLightNearby = false;
+        bool free = false;
+
+        // only build within the map
+        if (pos.y < mapBounds.min.y || pos.y > mapBounds.max.y ||
+            pos.x < mapBounds.min.x || pos.x > mapBounds.max.x)
+        {
+            return false;
+        }
+
         foreach (Collider2D overlap in overlaps)
         {
             //Debug.Log(overlap.gameObject.name);
@@ -106,11 +120,22 @@ public class StructureBuilder : MonoBehaviour
             }
             if (overlap.gameObject.GetComponent<LightSourceBehavior>() != null)
             {
-                IsLightNearby = true;
+                free = true;
             }
         }
         //Debug.Log("Light: " + IsLightNearby);
-        return IsLightNearby;
+        return free;
+    }
+
+    // https://answers.unity.com/questions/501893/calculating-2d-camera-bounds.html
+    public static Bounds OrthographicBounds(Camera camera)
+    {
+        float screenAspect = (float)Screen.width / (float)Screen.height;
+        float cameraHeight = camera.orthographicSize * 2;
+        Bounds bounds = new Bounds(
+            camera.transform.position,
+            new Vector3(cameraHeight * screenAspect, cameraHeight, 0));
+        return bounds;
     }
 
     void Build()
