@@ -46,6 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AllowColor: {r: 0.67358494, g: 1, b: 0.7457211, a: 0.49019608}
   BlockColor: {r: 0.735849, g: 0, b: 0, a: 0.34117648}
+  GameManager: {fileID: 0}
 --- !u!1 &1823243954623890045
 GameObject:
   m_ObjectHideFlags: 0
