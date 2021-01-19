@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Level1.unity
     guid: 76ccb8ca24e5746b58be58ab534ffdf0
   - enabled: 1
-    path: Assets/Scenes/Level2.unity
+    path: Assets/Scenes/RuslanScene.unity
     guid: 2c3615eb9dbdfa343af306908cd12d72
   - enabled: 1
     path: Assets/Scenes/Level3.unity
