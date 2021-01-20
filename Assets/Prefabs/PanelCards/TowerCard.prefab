@@ -347,3 +347,4 @@ MonoBehaviour:
   CostText: {fileID: 8819007978513258403}
   IconImage: {fileID: 8819007980097016528}
   button: {fileID: 8819007980542199683}
+  ItemSelected: {fileID: 11400000, guid: 5346860794724fa4cb801cb9245b032b, type: 2}

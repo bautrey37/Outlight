@@ -13,7 +13,7 @@ public class StructureCardPresenter : MonoBehaviour
     // public TextMeshProUGUI ShortcutText;
     public Image IconImage;
     public Button button;
-
+    public AudioClipGroup ItemSelected;
 
     private void Awake()
     {
@@ -52,6 +52,7 @@ public class StructureCardPresenter : MonoBehaviour
     public void Pressed()
     {
         Events.SelectStructure(StructureData);
+        ItemSelected.Play();
     }
 
 }

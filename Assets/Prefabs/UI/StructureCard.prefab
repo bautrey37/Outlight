@@ -346,3 +346,5 @@ MonoBehaviour:
   StructureData: {fileID: 11400000, guid: 1c8ab59fcac88df478b4213b4afb4951, type: 2}
   CostText: {fileID: 8819007978513258403}
   IconImage: {fileID: 8819007980097016528}
+  button: {fileID: 0}
+  ItemSelected: {fileID: 11400000, guid: 5346860794724fa4cb801cb9245b032b, type: 2}
