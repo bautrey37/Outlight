@@ -7,10 +7,14 @@ public class CameraMovement : MonoBehaviour
 {
     public float MoveSpeed = 1;
     public float EdgeSpeed = 10;
+    public GameObject Fire;
 
     void Start()
     {
-
+        if (Fire != null)
+        {
+            transform.position = new Vector3(Fire.transform.position.x, Fire.transform.position.y, -10);
+        }
     }
 
     void Update()

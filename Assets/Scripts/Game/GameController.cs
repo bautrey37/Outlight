@@ -18,6 +18,7 @@ public class GameController : MonoBehaviour
 
         BackgroundMusic.PlayBackground();
     }
+
     public void Update()
     {
         if (endLevel == true)
@@ -25,6 +26,7 @@ public class GameController : MonoBehaviour
             BackgroundMusic.StopBackground();
         }
     }
+
     public void Start()
     {
         Events.SetMoney(Money);
