@@ -26,4 +26,10 @@ public class StructureData : ScriptableObject
     [Space]
     public AudioClipGroup BuildSound;
 
+    [Header("Bullet")]
+    [Space]
+    [Range(1,5)]
+    public int BulletDamage;
+    [Range(1,20)]
+    public float BulletSpeed;
 }

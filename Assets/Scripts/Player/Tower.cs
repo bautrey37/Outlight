@@ -4,7 +4,7 @@ using System.Linq;
 using UnityEngine.EventSystems;
 using System.Collections.Generic;
 
-//[RequireComponent(typeof(Structure))]
+[RequireComponent(typeof(Structure))]
 
 public class Tower : MonoBehaviour
 {
@@ -15,12 +15,17 @@ public class Tower : MonoBehaviour
     public List<Health> EnemiesInRange;
     public AudioClipGroup ArrowShot;
 
+    private int bulletDamage;
+    private float bulletSpeed;
 
 
     private void Awake()
     {
         EnemiesInRange = new List<Health>();
         NextShootTime = Time.time + ShootDelay;
+        StructureData data = GetComponent<Structure>().structure;
+        bulletDamage = data.BulletDamage;
+        bulletSpeed = data.BulletSpeed;
     }
 
     private void Update()
@@ -51,6 +56,8 @@ public class Tower : MonoBehaviour
         });
         Bullet b = Instantiate(BulletPrefab, transform.position, Quaternion.identity, null);
         b.Target = closest;
+        b.Damage = bulletDamage;
+        b.Speed = bulletSpeed;
         ArrowShot.Play();
 
     }

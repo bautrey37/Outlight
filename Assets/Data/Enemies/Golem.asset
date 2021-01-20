@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458acb38fc62417e94f06785f367e71, type: 3}
   m_Name: Golem
   m_EditorClassIdentifier: 
-  Name: Golem
-  Health: 10
-  AttackStrength: 15
-  AttackSpeed: 5
-  Speed: 0.5
   EnemyPrefab: {fileID: 918040249, guid: 8db8069ae0754674c8438b689402a2a9, type: 3}
+  Name: Golem
+  Health: 15
+  AttackStrength: 10
+  AttackSpeed: 0.5
+  MovementSpeed: 0.49
   Moving: {fileID: 11400000, guid: afe4318aa114c0e46ac4375e275a6aad, type: 2}
   Attack: {fileID: 11400000, guid: cb3d189d0ea9c154f8c8aee690e7c6b6, type: 2}

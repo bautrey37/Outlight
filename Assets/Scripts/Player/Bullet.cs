@@ -14,7 +14,7 @@ public class Bullet : MonoBehaviour
         if ( Target!= null )
         {
             Vector3 targetDirection = transform.position - Target.transform.position;
-            if (targetDirection.sqrMagnitude <= 0.01f)
+            if (targetDirection.sqrMagnitude <= 0.1f)
             {
                 Target.Damage(Damage);
                 Destroy(gameObject);
