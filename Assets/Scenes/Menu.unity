@@ -2429,6 +2429,7 @@ GameObject:
   - component: {fileID: 1366913071}
   - component: {fileID: 1366913070}
   - component: {fileID: 1366913069}
+  - component: {fileID: 1366913072}
   m_Layer: 5
   m_Name: MenuPresenter
   m_TagString: Untagged
@@ -2473,6 +2474,7 @@ MonoBehaviour:
   MainMenu: {fileID: 2075584696}
   LevelsMenu: {fileID: 1087180023}
   OptionsMenu: {fileID: 0}
+  MenuSound: {fileID: 11400000, guid: d752c6ec0fb14a34cbc0b80aa1e8bc4a, type: 2}
 --- !u!114 &1366913070
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2511,6 +2513,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1366913067}
   m_CullTransparentMesh: 0
+--- !u!114 &1366913072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1366913067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62b82da5bc4a3463fa2097dd97d49de6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AudioSourcePrefab: {fileID: 2276731152611876337, guid: 4121f0a1784564701aae9f5ca57bd054, type: 3}
 --- !u!1 &1394977266
 GameObject:
   m_ObjectHideFlags: 0

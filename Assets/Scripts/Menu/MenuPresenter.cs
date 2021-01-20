@@ -7,7 +7,12 @@ public class MenuPresenter : MonoBehaviour
     public MainMenu MainMenu;
     public LevelsMenu LevelsMenu;
     public OptionsMenu OptionsMenu;
+    public AudioClipGroup MenuSound;
 
+    public void Start()
+    {
+        MenuSound.PlayBackground();
+    }
     /*
      * Tried to get animation to close and open different panels, but it was tricky to get working
      */

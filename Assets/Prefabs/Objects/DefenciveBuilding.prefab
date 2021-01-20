@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2931258402302244383}
+  - component: {fileID: 865537652}
   - component: {fileID: 2931258402302244380}
   - component: {fileID: 3313617827755794767}
-  - component: {fileID: 865537652}
   - component: {fileID: 865537653}
   - component: {fileID: -7449045815890514971}
   m_Layer: 0
@@ -37,6 +37,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &865537652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2931258402302244379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68e9bd86adcef4543a0d85513d127f66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  structure: {fileID: 11400000, guid: 9f16154d5fd6714489bcb0afd21ba466, type: 2}
 --- !u!114 &2931258402302244380
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66,19 +79,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBarPrefab: {fileID: 2604881914663022590, guid: 07766d08f0659cf4485f529f0068add9, type: 3}
---- !u!114 &865537652
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2931258402302244379}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68e9bd86adcef4543a0d85513d127f66, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  structure: {fileID: 11400000, guid: 9f16154d5fd6714489bcb0afd21ba466, type: 2}
+  hbinst: {fileID: 0}
 --- !u!58 &865537653
 CircleCollider2D:
   m_ObjectHideFlags: 0

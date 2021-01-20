@@ -14,7 +14,7 @@ public class Tower : MonoBehaviour
     private float NextShootTime;
     public List<Health> EnemiesInRange;
     public AudioClipGroup ArrowShot;
-   
+
 
 
     private void Awake()
@@ -52,6 +52,7 @@ public class Tower : MonoBehaviour
         Bullet b = Instantiate(BulletPrefab, transform.position, Quaternion.identity, null);
         b.Target = closest;
         ArrowShot.Play();
+
     }
 
     public void OnTriggerEnter2D(Collider2D collision)

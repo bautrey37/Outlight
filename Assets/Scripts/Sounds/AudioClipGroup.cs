@@ -19,7 +19,6 @@ public class AudioClipGroup : ScriptableObject
 
     public AudioSource backgroundSource;
     private float timestamp;
-
     private void OnEnable()
     {
         timestamp = 0;
@@ -54,7 +53,8 @@ public class AudioClipGroup : ScriptableObject
         backgroundSource.volume = GameSettings.Instance.BackgroundVolume;
         backgroundSource.pitch = 1;
         backgroundSource.clip = Clips[Random.Range(0, Clips.Count)];
-        backgroundSource.Play();
+        backgroundSource.PlayDelayed(1.5f);
+
         backgroundSource.loop = backgroundSource.isPlaying;
     }
 

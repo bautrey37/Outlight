@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458acb38fc62417e94f06785f367e71, type: 3}
   m_Name: Orc
   m_EditorClassIdentifier: 
-  Name: Orc
-  Health: 3
-  AttackStrength: 5
-  AttackSpeed: 0.3
-  Speed: 1
   EnemyPrefab: {fileID: -1703497024498414192, guid: 09586fe188718df4f94dd29a764fab9b, type: 3}
+  Name: Orc
+  Health: 8
+  AttackStrength: 9
+  AttackSpeed: 0.3
+  Speed: 1.52
   Moving: {fileID: 11400000, guid: afe4318aa114c0e46ac4375e275a6aad, type: 2}
   Attack: {fileID: 11400000, guid: cb3d189d0ea9c154f8c8aee690e7c6b6, type: 2}

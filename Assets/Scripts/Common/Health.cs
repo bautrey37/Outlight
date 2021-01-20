@@ -52,7 +52,7 @@ public class Health : MonoBehaviour
         Events.HealthDestroyed(gameObject);
         if (anim != null)
         {
-            anim.SetTrigger("Death");
+            //anim.SetTrigger("Death");
         }
         Destroy(gameObject);
     }
