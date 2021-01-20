@@ -208,8 +208,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1910267220917371892, guid: b8171b4277cd24145968e2e344d7b6fc, type: 3}
       propertyPath: m_Name
-      value: GameEndPanel
+      value: EndPanel
       objectReference: {fileID: 0}
+    - target: {fileID: 7698048464131957244, guid: b8171b4277cd24145968e2e344d7b6fc, type: 3}
+      propertyPath: Button
+      value: 
+      objectReference: {fileID: 3437242860501447886}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b8171b4277cd24145968e2e344d7b6fc, type: 3}
 --- !u!224 &3437242860537278741 stripped
@@ -217,6 +221,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1910267220917371891, guid: b8171b4277cd24145968e2e344d7b6fc, type: 3}
   m_PrefabInstance: {fileID: 3832892865894691558}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &3437242860501447886 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1910267221023098408, guid: b8171b4277cd24145968e2e344d7b6fc, type: 3}
+  m_PrefabInstance: {fileID: 3832892865894691558}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &3832892866152836247
 PrefabInstance:
   m_ObjectHideFlags: 0
