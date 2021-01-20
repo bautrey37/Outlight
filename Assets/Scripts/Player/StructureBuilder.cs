@@ -144,6 +144,7 @@ public class StructureBuilder : MonoBehaviour
         if (EventSystem.current.IsPointerOverGameObject()) return;
 
         Events.RemoveMoney(currentStructureData.Cost);
+        Events.StructureBuilt();
 
         Structure structure = Instantiate(currentStructureData.StructurePrefab, transform.position, Quaternion.identity, null);
         structure.setStructureData(currentStructureData);
