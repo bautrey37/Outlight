@@ -18,4 +18,21 @@ public class SceneLoader : MonoBehaviour
         SceneManager.LoadScene(next);
     }
 
+    public bool IsLastLevel()
+    {
+        if (SceneManager.GetActiveScene().name == "Level4")
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    public void LoadMenu()
+    {
+        SceneManager.LoadScene("Menu");
+    }
+
 }

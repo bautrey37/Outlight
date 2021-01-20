@@ -1,17 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &322770447
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3437242860537278738}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb412c82338cb42d696668b71fa0cc4f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &3832892866026049601
 GameObject:
   m_ObjectHideFlags: 0
@@ -260,11 +248,6 @@ PrefabInstance:
       objectReference: {fileID: 3437242860209731031}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b8171b4277cd24145968e2e344d7b6fc, type: 3}
---- !u!1 &3437242860537278738 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1910267220917371892, guid: b8171b4277cd24145968e2e344d7b6fc, type: 3}
-  m_PrefabInstance: {fileID: 3832892865894691558}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &3437242860537278741 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1910267220917371891, guid: b8171b4277cd24145968e2e344d7b6fc, type: 3}
@@ -667,6 +650,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3832892866026049604}
     m_Modifications:
+    - target: {fileID: 2810715590251420401, guid: 15020c3c3c848ad40a14cd442f9f5ddf, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -4.0000305
+      objectReference: {fileID: 0}
     - target: {fileID: 2810715590679826336, guid: 15020c3c3c848ad40a14cd442f9f5ddf, type: 3}
       propertyPath: m_AnchorMin.y
       value: 0
@@ -765,11 +752,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6729156264087302833, guid: 15020c3c3c848ad40a14cd442f9f5ddf, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 355.94
+      value: 355.93994
       objectReference: {fileID: 0}
     - target: {fileID: 6729156264087302833, guid: 15020c3c3c848ad40a14cd442f9f5ddf, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 44.000046
+      value: 44
       objectReference: {fileID: 0}
     - target: {fileID: 6729156264087302833, guid: 15020c3c3c848ad40a14cd442f9f5ddf, type: 3}
       propertyPath: m_SizeDelta.x

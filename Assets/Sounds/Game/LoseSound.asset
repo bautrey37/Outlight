@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cad80b68131e4cacbc0f7021d48e560, type: 3}
   m_Name: LoseSound
   m_EditorClassIdentifier: 
-  VolumeMin: 0.93
-  VolumeMax: 1.08
-  PitchMin: 0.88
-  PitchMax: 1.11
+  VolumeMin: 1
+  VolumeMax: 1
+  PitchMin: 1
+  PitchMax: 1
   Cooldown: 0.1
   Clips:
   - {fileID: 8300000, guid: 852e3e0c38fc29547b47de3783adfd5e, type: 3}

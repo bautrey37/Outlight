@@ -37,13 +37,13 @@ public class MyWindow : EditorWindow
         }
         GUILayout.Space(5);
 
-        if (GUILayout.Button("Trigger end level win"))
+        if (GUILayout.Button("Trigger Win"))
         {
             Events.EndLevel(true);
         }
         GUILayout.Space(5);
 
-        if (GUILayout.Button("Trigger end level lose"))
+        if (GUILayout.Button("Trigger Lose"))
         {
             Events.EndLevel(false);
         }

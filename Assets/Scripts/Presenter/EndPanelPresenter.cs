@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
 public class EndPanelPresenter : MonoBehaviour
 {
@@ -19,7 +18,6 @@ public class EndPanelPresenter : MonoBehaviour
         gameObject.SetActive(false);
 
         Events.OnEndLevel += OnEndLevel;
-        Events.OnEndGame += OnEndGame;
     }
 
     private void Start()
@@ -30,15 +28,26 @@ public class EndPanelPresenter : MonoBehaviour
     private void OnDestroy()
     {
         Events.OnEndLevel -= OnEndLevel;
-        Events.OnEndLevel -= OnEndGame;
     }
 
     void OnEndLevel(bool isWin)
     {
+        if (gameObject.activeSelf) return;
+
         if (isWin)
         {
-            WinLevel();
-        } else
+            sceneLoader = gameObject.GetComponent<SceneLoader>();
+            // if last level is won, win game
+            if (sceneLoader.IsLastLevel())
+            {
+                WinGame();
+            }
+            else
+            {
+                WinLevel();
+            }
+        }
+        else
         {
             LoseLevel();
         }
@@ -50,8 +59,9 @@ public class EndPanelPresenter : MonoBehaviour
         SetNextLevelButton();
         Button.onClick.AddListener(NextLevelAction);
         gameObject.SetActive(true);
+
         WinSound.StopBackground();
-        WinSound.PlayBackground();
+        WinSound.Play();
     }
 
     void LoseLevel()
@@ -60,21 +70,10 @@ public class EndPanelPresenter : MonoBehaviour
         SetBackToMenuButton();
         Button.onClick.AddListener(GotoMenuAction);
         gameObject.SetActive(true);
-        WinSound.StopBackground();
-        LoseSound.PlayBackground();
-     
-    }
 
-    void OnEndGame(bool isWin)
-    {
-        if (isWin)
-        {
-            WinGame();
-        }
-        else
-        {
-            LoseGame();
-        }
+        WinSound.StopBackground();
+        LoseSound.Play();
+     
     }
 
     void WinGame()
@@ -83,19 +82,9 @@ public class EndPanelPresenter : MonoBehaviour
         SetBackToMenuButton();
         Button.onClick.AddListener(GotoMenuAction);
         gameObject.SetActive(true);
-        WinSound.StopBackground();
-        WinSound.PlayBackground();
-    }
 
-    void LoseGame()
-    {
-        EndText.text = "LOST!";
-        SetBackToMenuButton();
-        Button.onClick.AddListener(GotoMenuAction);
-        gameObject.SetActive(true);
         WinSound.StopBackground();
-        LoseSound.PlayBackground();
-
+        WinSound.Play();
     }
 
     void SetBackToMenuButton()
@@ -111,12 +100,14 @@ public class EndPanelPresenter : MonoBehaviour
     void GotoMenuAction()
     {
         gameObject.SetActive(false);
-        SceneManager.LoadScene("Menu");
+
+        sceneLoader.LoadMenu();
     }
 
     void NextLevelAction()
     {
         gameObject.SetActive(false);
+
         sceneLoader.LoadNextLevel();
     }
 }

@@ -15,6 +15,7 @@ public class GameController : MonoBehaviour
         Events.OnRequestMoney += OnRequestMoney;
         Events.OnHealthDestroyed += OnHealthDestroyed;
         Events.OnEndLevel += OnEndLevel;
+
         BackgroundMusic.PlayBackground();
     }
     public void Update()
@@ -68,7 +69,6 @@ public class GameController : MonoBehaviour
     void OnEndLevel(bool isWin)
     {
         endLevel = true;
-        // if last level send endGame event.
     }
 
 }
