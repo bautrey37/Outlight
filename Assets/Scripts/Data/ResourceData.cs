@@ -7,6 +7,6 @@ public class ResourceData : ScriptableObject
 {
     [Header("Attributes")]
     [Space]
-    [Range(1,10)]
+    [Range(5,20)]
     public int Income;
 }

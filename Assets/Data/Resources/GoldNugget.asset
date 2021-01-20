@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6eb6cf9e23622434e934ac760fbef9db, type: 3}
   m_Name: GoldNugget
   m_EditorClassIdentifier: 
-  Income: 5
+  Income: 10

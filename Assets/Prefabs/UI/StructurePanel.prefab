@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8568242687234691580}
   - component: {fileID: 8568242687234691583}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: StructurePanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -213,6 +213,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8568242687234691582}
     m_Modifications:
+    - target: {fileID: 8819007980097016528, guid: 9be6e0fe4f0330645bcd21e4a61f8726, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8819007980542199680, guid: 9be6e0fe4f0330645bcd21e4a61f8726, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
