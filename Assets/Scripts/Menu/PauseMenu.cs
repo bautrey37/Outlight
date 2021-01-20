@@ -26,7 +26,7 @@ public class PauseMenu : MonoBehaviour
     }
     public void Resume()
     {
-        AudioSource music = AudioClipGroup.FindObjectOfType<AudioSource>();
+        AudioSource music = GameController.FindObjectOfType<AudioSource>();
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
@@ -35,7 +35,7 @@ public class PauseMenu : MonoBehaviour
 
     void Pause()
     {
-        AudioSource music = AudioClipGroup.FindObjectOfType<AudioSource>();
+        AudioSource music = GameController.FindObjectOfType<AudioSource>();
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;

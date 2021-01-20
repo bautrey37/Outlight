@@ -16,7 +16,7 @@ public class SkillPresenter : MonoBehaviour
     public Image IconImage;
 
     public Button button;
-
+    public AudioClipGroup SkillUsed;
 
 
     private void Start()
@@ -56,6 +56,7 @@ public class SkillPresenter : MonoBehaviour
 
         Events.SelectSkill(SkillsData);
         Events.RemoveMoney(SkillsData.Cost);
+        SkillUsed.Play();
         Debug.Log("Pressed");
     }
 

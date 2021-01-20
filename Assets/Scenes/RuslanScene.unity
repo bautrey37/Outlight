@@ -64673,6 +64673,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 32879712}
     m_Modifications:
+    - target: {fileID: 184184412739711964, guid: cee01b19be566d34ba4c32b768896842, type: 3}
+      propertyPath: ItemSelected
+      value: 
+      objectReference: {fileID: 11400000, guid: 5346860794724fa4cb801cb9245b032b, type: 2}
+    - target: {fileID: 1497666533805199623, guid: cee01b19be566d34ba4c32b768896842, type: 3}
+      propertyPath: ItemSelected
+      value: 
+      objectReference: {fileID: 11400000, guid: 5346860794724fa4cb801cb9245b032b, type: 2}
     - target: {fileID: 7305824607352154436, guid: cee01b19be566d34ba4c32b768896842, type: 3}
       propertyPath: m_PreserveAspect
       value: 1
