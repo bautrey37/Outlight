@@ -14,6 +14,7 @@ public class GameController : MonoBehaviour
         Events.OnSetMoney += OnSetMoney;
         Events.OnRequestMoney += OnRequestMoney;
         Events.OnHealthDestroyed += OnHealthDestroyed;
+        Events.OnEndLevel += OnEndLevel;
         BackgroundMusic.PlayBackground();
     }
     public void Update()
@@ -33,6 +34,7 @@ public class GameController : MonoBehaviour
         Events.OnSetMoney -= OnSetMoney;
         Events.OnRequestMoney -= OnRequestMoney;
         Events.OnHealthDestroyed -= OnHealthDestroyed;
+        Events.OnEndLevel -= OnEndLevel;
     }
 
     private void OnSetMoney(int amount)
@@ -55,14 +57,18 @@ public class GameController : MonoBehaviour
 
         if (!endLevel && structures.Length == 1 && structure != null)
         {
-            endLevel = true;
             Events.EndLevel(false);
         }
         if (!endLevel && camps.Length == 1 && camp != null)
         {
-            endLevel = true;
             Events.EndLevel(true);
         }
+    }
+
+    void OnEndLevel(bool isWin)
+    {
+        endLevel = true;
+        // if last level send endGame event.
     }
 
 }

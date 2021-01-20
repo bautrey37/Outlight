@@ -37,6 +37,18 @@ public class MyWindow : EditorWindow
         }
         GUILayout.Space(5);
 
+        if (GUILayout.Button("Trigger end level win"))
+        {
+            Events.EndLevel(true);
+        }
+        GUILayout.Space(5);
+
+        if (GUILayout.Button("Trigger end level lose"))
+        {
+            Events.EndLevel(false);
+        }
+        GUILayout.Space(5);
+
         myFloat = EditorGUILayout.Slider("Time speed", myFloat, 0, 2);
         Time.timeScale = myFloat;
     }
