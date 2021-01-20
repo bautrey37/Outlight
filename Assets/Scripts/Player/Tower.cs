@@ -4,7 +4,7 @@ using System.Linq;
 using UnityEngine.EventSystems;
 using System.Collections.Generic;
 
-[RequireComponent(typeof(Structure))]
+//[RequireComponent(typeof(Structure))]
 
 public class Tower : MonoBehaviour
 {
@@ -57,11 +57,11 @@ public class Tower : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Trigger1");
+        //Debug.Log("Trigger1");
         Health enemy = collision.GetComponent<Health>();
         if (enemy != null)
         {
-            Debug.Log("Enemy!");
+            //Debug.Log("Enemy!");
             EnemiesInRange.Add(enemy);
         }
     }
