@@ -20,3 +20,5 @@ MonoBehaviour:
   Shortcut: Alpha2
   Icon: {fileID: 21300000, guid: bce65870415b4dc40bfa4d6dc2fe954b, type: 3}
   BuildSound: {fileID: 11400000, guid: ff4382786043a964da66ded76f08a8ee, type: 2}
+  BulletDamage: 2
+  BulletSpeed: 10

@@ -11,14 +11,14 @@ public class EnemyData : ScriptableObject
     [Header("Attributes")]
     [Space]
     public string Name;
-    [Range(0,10)]
+    [Range(0,20)]
     public int Health;
     [Range(0,10)]
     public int AttackStrength;
     [Range(0,1)]
     public float AttackSpeed;
     [Range(0,3)]
-    public float Speed;
+    public float MovementSpeed;
 
     [Header("Audio")]
     [Space]

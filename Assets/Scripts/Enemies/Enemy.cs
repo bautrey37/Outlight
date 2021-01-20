@@ -25,7 +25,7 @@ public class Enemy : MonoBehaviour
     {
         anim = GetComponentInChildren<Animator>();
         TargetsInRange = new List<Transform>();
-        movementSpeed = EnemyData.Speed;
+        movementSpeed = EnemyData.MovementSpeed;
         attackStrength = EnemyData.AttackStrength;
         attackSpeed = EnemyData.AttackSpeed;
         GetComponent<Health>().InitMaxHealth(EnemyData.Health);

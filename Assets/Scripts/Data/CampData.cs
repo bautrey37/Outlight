@@ -10,7 +10,7 @@ public class CampData : ScriptableObject
     [Header("Attributes")]
     [Space]
     public string Name;
-    [Range(1,30)]
+    [Range(1,50)]
     public int Health;
     [Range(1, 3)]
     public int MaxSpawnedEnemies;
