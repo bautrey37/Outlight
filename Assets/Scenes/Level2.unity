@@ -588,7 +588,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6729156264087302833, guid: 15020c3c3c848ad40a14cd442f9f5ddf, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6729156264087302833, guid: 15020c3c3c848ad40a14cd442f9f5ddf, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1268,6 +1268,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7542237313979210553, guid: 6e853648ab0effc4a89dc59d62c4b847, type: 3}
   m_PrefabInstance: {fileID: 925798423}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &935831686 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8498503870142945695, guid: 98c01d174af885041bf098e8970a507c, type: 3}
+  m_PrefabInstance: {fileID: 1854402653}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1047317286
 GameObject:
   m_ObjectHideFlags: 0
@@ -1445,7 +1450,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8568242687234691582, guid: cee01b19be566d34ba4c32b768896842, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8568242687234691582, guid: cee01b19be566d34ba4c32b768896842, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1871,7 +1876,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7295690359524487007, guid: e0bcab4e10e4ae04b8a3de26c5f74ef4, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7295690359524487007, guid: e0bcab4e10e4ae04b8a3de26c5f74ef4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -6348,7 +6353,7 @@ PrefabInstance:
     - target: {fileID: 1668626970651899069, guid: 98c01d174af885041bf098e8970a507c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2050505987}
     - target: {fileID: 1668626970651899069, guid: 98c01d174af885041bf098e8970a507c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Resume
@@ -6356,7 +6361,7 @@ PrefabInstance:
     - target: {fileID: 1668626971301448838, guid: 98c01d174af885041bf098e8970a507c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2050505987}
     - target: {fileID: 1668626971301448838, guid: 98c01d174af885041bf098e8970a507c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: LoadMenu
@@ -6364,7 +6369,7 @@ PrefabInstance:
     - target: {fileID: 1668626971316827854, guid: 98c01d174af885041bf098e8970a507c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2050505987}
     - target: {fileID: 1668626971316827854, guid: 98c01d174af885041bf098e8970a507c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ReloadLevel
@@ -6561,7 +6566,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1910267220917371891, guid: b8171b4277cd24145968e2e344d7b6fc, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1910267220917371891, guid: b8171b4277cd24145968e2e344d7b6fc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -6708,6 +6713,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2050505991}
   - component: {fileID: 2050505990}
+  - component: {fileID: 2050505987}
   - component: {fileID: 2050505989}
   - component: {fileID: 2050505988}
   m_Layer: 5
@@ -6717,6 +6723,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &2050505987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2050505986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea92fab302c0caf4baef91117e0b9d54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseMenuUI: {fileID: 935831686}
 --- !u!114 &2050505988
 MonoBehaviour:
   m_ObjectHideFlags: 0

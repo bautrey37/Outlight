@@ -51,7 +51,7 @@ public class Spawn : MonoBehaviour
     {
         nextSpawnTime = Time.time + timeBetweenSpawn;
 
-        Enemy enemy = Instantiate(EnemyData.EnemyPrefab, transform.position, Quaternion.identity, null);
+        Enemy enemy = Instantiate(EnemyData.EnemyPrefab, transform.position + new Vector3(1-2*Random.value, 1-2*Random.value), Quaternion.identity, null);
         return enemy;
     }
 }

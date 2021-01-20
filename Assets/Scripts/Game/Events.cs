@@ -24,4 +24,9 @@ public static class Events
 
     public static event Action<bool> OnEndLevel;
     public static void EndLevel(bool isWin) => OnEndLevel?.Invoke(isWin);
+    public static event Action<bool> OnEndGame;
+    public static void EndGame(bool isWin) => OnEndGame?.Invoke(isWin);
+
+    public static event Action OnStructureBuilt;
+    internal static void StructureBuilt() => OnStructureBuilt?.Invoke();
 }
