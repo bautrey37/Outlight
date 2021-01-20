@@ -665,7 +665,6 @@ GameObject:
   - component: {fileID: 918040250}
   - component: {fileID: 918040248}
   - component: {fileID: 918040249}
-  - component: {fileID: 3392046956130839566}
   - component: {fileID: 2526143304859054217}
   m_Layer: 0
   m_Name: Golem
@@ -753,25 +752,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyData: {fileID: 11400000, guid: 70de859a8280a5a4d968e906bfd34e4b, type: 2}
---- !u!95 &3392046956130839566
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1475286338648080}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 7ca54fc317997454e97ba7860edbd3fd, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &2526143304859054217
 MonoBehaviour:
   m_ObjectHideFlags: 0

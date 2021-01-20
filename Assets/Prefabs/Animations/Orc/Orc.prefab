@@ -580,7 +580,6 @@ GameObject:
   - component: {fileID: -7174631609669491526}
   - component: {fileID: 1148835929630531582}
   - component: {fileID: -2986447742419169240}
-  - component: {fileID: 6618000345016947282}
   - component: {fileID: 8515494437962776114}
   m_Layer: 0
   m_Name: Orc
@@ -668,25 +667,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!95 &6618000345016947282
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1536174974547902}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 6b1c01a22364b4040abafe7ed5749aeb, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &8515494437962776114
 MonoBehaviour:
   m_ObjectHideFlags: 0
