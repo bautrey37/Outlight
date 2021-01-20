@@ -811,14 +811,14 @@ PrefabInstance:
     - target: {fileID: 7122697199845380659, guid: 60915800506984b13b33bf70fdc566a4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 5008081127199396234, guid: cc82c2fbf0b864aa19334070b7ee4e5f, type: 3}
     - target: {fileID: 7122697199845380659, guid: 60915800506984b13b33bf70fdc566a4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: PauseMenu, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 7122697199845380659, guid: 60915800506984b13b33bf70fdc566a4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Resume
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7122697199845380659, guid: 60915800506984b13b33bf70fdc566a4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
