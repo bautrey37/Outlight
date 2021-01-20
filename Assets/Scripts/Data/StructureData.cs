@@ -16,6 +16,8 @@ public class StructureData : ScriptableObject
     public int MaintenanceCost;
     [Range(0,100)]
     public int Health;
+    [Range(1,10)]
+    public int Range;
 
     [Header("GUI Panel Attributes")]
     [Space]
@@ -32,4 +34,5 @@ public class StructureData : ScriptableObject
     public int BulletDamage;
     [Range(1,20)]
     public float BulletSpeed;
+    
 }
