@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2931258402302244383}
   - component: {fileID: 865537652}
-  - component: {fileID: 2931258402302244380}
   - component: {fileID: 3313617827755794767}
+  - component: {fileID: 2931258402302244380}
   - component: {fileID: 865537653}
   - component: {fileID: -7449045815890514971}
   m_Layer: 0
@@ -50,6 +50,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   structure: {fileID: 11400000, guid: 9f16154d5fd6714489bcb0afd21ba466, type: 2}
+--- !u!114 &3313617827755794767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2931258402302244379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e70f96577dcb4a4fa30d6c087cc086f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthBarPrefab: {fileID: 2604881914663022590, guid: 07766d08f0659cf4485f529f0068add9, type: 3}
+  hbinst: {fileID: 0}
 --- !u!114 &2931258402302244380
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66,20 +80,6 @@ MonoBehaviour:
   BulletPrefab: {fileID: 6098228261532989901, guid: 9fc798c9e140adf48bcf5d5289d2637f, type: 3}
   EnemiesInRange: []
   ArrowShot: {fileID: 11400000, guid: 42b97188c35a5a74785774c39ef2693d, type: 2}
---- !u!114 &3313617827755794767
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2931258402302244379}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e70f96577dcb4a4fa30d6c087cc086f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthBarPrefab: {fileID: 2604881914663022590, guid: 07766d08f0659cf4485f529f0068add9, type: 3}
-  hbinst: {fileID: 0}
 --- !u!58 &865537653
 CircleCollider2D:
   m_ObjectHideFlags: 0

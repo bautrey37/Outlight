@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class EndPanelPresenter : MonoBehaviour
 {
-    public TextMeshProUGUI EndGameText;
+    public TextMeshProUGUI EndText;
     public Button Button;
     public AudioClipGroup WinSound;
     public AudioClipGroup LoseSound;
@@ -17,10 +17,14 @@ public class EndPanelPresenter : MonoBehaviour
     private void Awake()
     {
         gameObject.SetActive(false);
-        
 
         Events.OnEndLevel += OnEndLevel;
         Events.OnEndGame += OnEndGame;
+    }
+
+    private void Start()
+    {
+        sceneLoader = gameObject.GetComponent<SceneLoader>();
     }
 
     private void OnDestroy()
@@ -42,7 +46,7 @@ public class EndPanelPresenter : MonoBehaviour
 
     void WinLevel()
     {
-        EndGameText.text = "Level Won";
+        EndText.text = "Level Won";
         SetNextLevelButton();
         Button.onClick.AddListener(NextLevelAction);
         gameObject.SetActive(true);
@@ -52,7 +56,7 @@ public class EndPanelPresenter : MonoBehaviour
 
     void LoseLevel()
     {
-        EndGameText.text = "Level Lost";
+        EndText.text = "Level Lost";
         SetBackToMenuButton();
         Button.onClick.AddListener(GotoMenuAction);
         gameObject.SetActive(true);
@@ -75,7 +79,7 @@ public class EndPanelPresenter : MonoBehaviour
 
     void WinGame()
     {
-        EndGameText.text = "VICTORY!";
+        EndText.text = "VICTORY!";
         SetBackToMenuButton();
         Button.onClick.AddListener(GotoMenuAction);
         gameObject.SetActive(true);
@@ -85,7 +89,7 @@ public class EndPanelPresenter : MonoBehaviour
 
     void LoseGame()
     {
-        EndGameText.text = "LOST!";
+        EndText.text = "LOST!";
         SetBackToMenuButton();
         Button.onClick.AddListener(GotoMenuAction);
         gameObject.SetActive(true);
@@ -96,12 +100,12 @@ public class EndPanelPresenter : MonoBehaviour
 
     void SetBackToMenuButton()
     {
-        Button.GetComponentInChildren<Text>().text = "Back to Menu";
+        Button.GetComponentInChildren<TextMeshProUGUI>().text = "Back to Menu";
     }
 
     void SetNextLevelButton()
     {
-        Button.GetComponentInChildren<Text>().text = "Next Level";
+        Button.GetComponentInChildren<TextMeshProUGUI>().text = "Next Level";
     }
 
     void GotoMenuAction()

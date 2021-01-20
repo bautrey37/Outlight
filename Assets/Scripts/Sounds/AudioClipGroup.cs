@@ -61,9 +61,9 @@ public class AudioClipGroup : ScriptableObject
     // TODO: put background music in a persisted state, not in teh clip file
     public void StopBackground()
     {
-        Debug.Log("StopBackground1");
+        //Debug.Log("StopBackground1");
         if (backgroundSource == null) return;
-        Debug.Log("StopBackground2");
+        //Debug.Log("StopBackground2");
         backgroundSource.Stop();
     }
 
