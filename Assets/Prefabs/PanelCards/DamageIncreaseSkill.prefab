@@ -221,6 +221,7 @@ GameObject:
   - component: {fileID: 8819007980542199709}
   - component: {fileID: 5030500790635267375}
   - component: {fileID: 2420875212589528446}
+  - component: {fileID: 7818726967768508744}
   - component: {fileID: 8819007980542199682}
   - component: {fileID: 8819007980542199683}
   m_Layer: 5
@@ -275,6 +276,7 @@ MonoBehaviour:
   CostText: {fileID: 8819007978513258403}
   IconImage: {fileID: 8819007980097016528}
   button: {fileID: 8819007980542199683}
+  SkillUsed: {fileID: 0}
 --- !u!114 &2420875212589528446
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -291,6 +293,20 @@ MonoBehaviour:
   skillsData: {fileID: 11400000, guid: 8a3f4e48a5ab20246955bfba67df6157, type: 2}
   button: {fileID: 8819007980542199683}
   tower: {fileID: 2931258402302244380, guid: 90dcf655fd118ad4a91a4d6d452f7511, type: 3}
+--- !u!114 &7818726967768508744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8819007980542199681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6476f8f67cb22bf45bbde9eee4c3be03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  header: Damage Inecrease Skill
+  content: Increase damage of towers by 2
 --- !u!114 &8819007980542199682
 MonoBehaviour:
   m_ObjectHideFlags: 0

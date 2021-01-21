@@ -26,7 +26,7 @@ public class ShootDelayDecreaseSkill : MonoBehaviour
     {
         if (button.interactable && Input.GetKeyDown((KeyCode)Enum.Parse(typeof(KeyCode), skillsData.Shortcut)) || buttonPressed)
         {
-            tower.ShootDelay -= 0.2f;
+            tower.ShootDelay -= 0.05f;
             Debug.Log("Delay" + tower.ShootDelay);
             buttonPressed = false;
         }

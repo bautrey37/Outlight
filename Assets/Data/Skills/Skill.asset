@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SkillPrefab: {fileID: 7882521902348519554, guid: 8fe6efc4469e61f40b354b0db5002ca8, type: 3}
   Name: Skill
-  Cost: 5
+  Cost: 10
   Shortcut: Alpha3
   Icon: {fileID: 21300000, guid: 5b1819d305126754f9515c5d98c91862, type: 3}

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 386420993612949602}
   - component: {fileID: 386420993612949631}
   - component: {fileID: 2279864014853026225}
+  - component: {fileID: 8256571923170692168}
   - component: {fileID: 4246985708774042317}
   - component: {fileID: 386420993612949600}
   - component: {fileID: 386420993612949601}
@@ -65,6 +66,20 @@ MonoBehaviour:
   skillsData: {fileID: 11400000, guid: af029c54a45eb214d8a9e910fc5c3a9b, type: 2}
   button: {fileID: 386420993612949601}
   tower: {fileID: 2931258402302244380, guid: 90dcf655fd118ad4a91a4d6d452f7511, type: 3}
+--- !u!114 &8256571923170692168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 386420993612949603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6476f8f67cb22bf45bbde9eee4c3be03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  header: Decrease shoot delay
+  content: Decreasing shooting delay
 --- !u!114 &4246985708774042317
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -81,6 +96,7 @@ MonoBehaviour:
   CostText: {fileID: 386420994301917249}
   IconImage: {fileID: 386420993721417010}
   button: {fileID: 386420993612949601}
+  SkillUsed: {fileID: 0}
 --- !u!114 &386420993612949600
 MonoBehaviour:
   m_ObjectHideFlags: 0
