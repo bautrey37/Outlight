@@ -2652,8 +2652,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MainMenu: {fileID: 2075584696}
   LevelsMenu: {fileID: 1087180023}
-  OptionsMenu: {fileID: 0}
-  MenuSound: {fileID: 11400000, guid: d752c6ec0fb14a34cbc0b80aa1e8bc4a, type: 2}
+  OptionsMenu: {fileID: 1067184814}
+  MenuBackgroundSound: {fileID: 11400000, guid: d752c6ec0fb14a34cbc0b80aa1e8bc4a, type: 2}
+  ButtonClickSound: {fileID: 11400000, guid: f6695b8d1e55b4263bd8ba19fe1af888, type: 2}
 --- !u!114 &1366913070
 MonoBehaviour:
   m_ObjectHideFlags: 0
