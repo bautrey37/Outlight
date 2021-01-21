@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemyPrefab: {fileID: 918040249, guid: 8db8069ae0754674c8438b689402a2a9, type: 3}
   Name: Golem
-  Health: 15
-  AttackStrength: 10
-  AttackSpeed: 0.5
-  MovementSpeed: 0.49
+  Health: 20
+  AttackStrength: 12
+  AttackSpeed: 0.3
+  MovementSpeed: 0.7
   Moving: {fileID: 11400000, guid: afe4318aa114c0e46ac4375e275a6aad, type: 2}
   Attack: {fileID: 11400000, guid: cb3d189d0ea9c154f8c8aee690e7c6b6, type: 2}

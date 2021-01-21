@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CampPrefab: {fileID: 476819216285811338, guid: 6c810d5d35abea242bcf4d4980173b9b, type: 3}
   Name: Golem Camp
-  Health: 50
+  Health: 75
   MaxSpawnedEnemies: 1
   SpawnFrequency: 1

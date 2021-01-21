@@ -17,6 +17,8 @@ MonoBehaviour:
   Cost: 15
   MaintenanceCost: 1
   Health: 40
+  Range: 4
+  ShootDelay: 1
   Shortcut: Alpha2
   Icon: {fileID: 21300000, guid: bce65870415b4dc40bfa4d6dc2fe954b, type: 3}
   BuildSound: {fileID: 11400000, guid: ff4382786043a964da66ded76f08a8ee, type: 2}

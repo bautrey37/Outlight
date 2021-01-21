@@ -17,7 +17,9 @@ public class StructureData : ScriptableObject
     [Range(0,100)]
     public int Health;
     [Range(1,10)]
-    public int Range;
+    public int Range; // NOT IMPLEMENTED
+    [Range(0.5f,4f)]
+    public float ShootDelay;
 
     [Header("GUI Panel Attributes")]
     [Space]

@@ -13,7 +13,7 @@ public class EnemyData : ScriptableObject
     public string Name;
     [Range(0,20)]
     public int Health;
-    [Range(0,10)]
+    [Range(0,20)]
     public int AttackStrength;
     [Range(0,1)]
     public float AttackSpeed;

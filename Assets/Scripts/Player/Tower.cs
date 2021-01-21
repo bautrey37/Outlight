@@ -26,6 +26,7 @@ public class Tower : MonoBehaviour
         StructureData data = GetComponent<Structure>().structure;
         bulletDamage = data.BulletDamage;
         bulletSpeed = data.BulletSpeed;
+        ShootDelay = data.ShootDelay;
     }
 
     private void Update()

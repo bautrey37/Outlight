@@ -17,6 +17,6 @@ MonoBehaviour:
   Health: 6
   AttackStrength: 5
   AttackSpeed: 0.3
-  MovementSpeed: 0.82
+  MovementSpeed: 1
   Moving: {fileID: 11400000, guid: afe4318aa114c0e46ac4375e275a6aad, type: 2}
   Attack: {fileID: 11400000, guid: cb3d189d0ea9c154f8c8aee690e7c6b6, type: 2}
