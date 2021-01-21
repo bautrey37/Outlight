@@ -222,6 +222,7 @@ GameObject:
   - component: {fileID: 8819007980542199682}
   - component: {fileID: 8819007980542199683}
   - component: {fileID: 848979153179896467}
+  - component: {fileID: 7153312257369930862}
   m_Layer: 5
   m_Name: LightCard
   m_TagString: Untagged
@@ -348,3 +349,19 @@ MonoBehaviour:
   IconImage: {fileID: 8819007980097016528}
   button: {fileID: 8819007980542199683}
   ItemSelected: {fileID: 11400000, guid: 5346860794724fa4cb801cb9245b032b, type: 2}
+--- !u!114 &7153312257369930862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8819007980542199681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6476f8f67cb22bf45bbde9eee4c3be03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  header: Fire
+  content: 'Genereate gold
+
+    Shows the territory around'
