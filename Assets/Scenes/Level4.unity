@@ -23757,13 +23757,13 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5008081127199396233, guid: cc82c2fbf0b864aa19334070b7ee4e5f, type: 3}
-      propertyPath: BackgroundMap
-      value: 
-      objectReference: {fileID: 1720579785}
-    - target: {fileID: 5008081127199396233, guid: cc82c2fbf0b864aa19334070b7ee4e5f, type: 3}
       propertyPath: DarkMap
       value: 
       objectReference: {fileID: 863640285}
+    - target: {fileID: 5008081127199396233, guid: cc82c2fbf0b864aa19334070b7ee4e5f, type: 3}
+      propertyPath: BackgroundMap
+      value: 
+      objectReference: {fileID: 1720579785}
     - target: {fileID: 5008081127199396234, guid: cc82c2fbf0b864aa19334070b7ee4e5f, type: 3}
       propertyPath: m_Name
       value: GameManager
@@ -24079,26 +24079,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2050505987}
-    - target: {fileID: 1668626970651899069, guid: 98c01d174af885041bf098e8970a507c, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Resume
-      objectReference: {fileID: 0}
     - target: {fileID: 1668626971301448838, guid: 98c01d174af885041bf098e8970a507c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2050505987}
-    - target: {fileID: 1668626971301448838, guid: 98c01d174af885041bf098e8970a507c, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: LoadMenu
-      objectReference: {fileID: 0}
     - target: {fileID: 1668626971316827854, guid: 98c01d174af885041bf098e8970a507c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2050505987}
-    - target: {fileID: 1668626971316827854, guid: 98c01d174af885041bf098e8970a507c, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ReloadLevel
-      objectReference: {fileID: 0}
     - target: {fileID: 8498503870142945682, guid: 98c01d174af885041bf098e8970a507c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
