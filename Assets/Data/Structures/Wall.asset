@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81794cbdcc3ae3d4da8f2e13201ea595, type: 3}
+  m_Name: Wall
+  m_EditorClassIdentifier: 
+  StructurePrefab: {fileID: 865537652, guid: 6f8816fdfa4da6f4a8462376553548a0, type: 3}
+  Name: Wall
+  Cost: 25
+  MaintenanceCost: 0
+  Health: 100
+  Shortcut: Alpha4
+  Icon: {fileID: 8147879406039747934, guid: 92879008d1414441bb045e2ba2cb9c33, type: 3}
+  BuildSound: {fileID: 11400000, guid: ff4382786043a964da66ded76f08a8ee, type: 2}
+  BulletDamage: 1
+  BulletSpeed: 1
