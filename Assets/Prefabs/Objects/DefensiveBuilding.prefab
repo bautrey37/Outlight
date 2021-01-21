@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 865537653}
   - component: {fileID: -7449045815890514971}
   m_Layer: 0
-  m_Name: DefenciveBuilding
+  m_Name: DefensiveBuilding
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
